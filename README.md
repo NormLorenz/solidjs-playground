@@ -39,3 +39,10 @@ Your app is ready to be deployed!
 ## Deployment
 
 You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
+
+## Work Items
+
+- Integrate Bootstrap
+- Integrate Firestore
+- Integrate Redux/Store
+- Integrate SCSS Complier
