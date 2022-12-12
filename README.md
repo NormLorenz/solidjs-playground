@@ -46,3 +46,9 @@ You can deploy the `dist` folder to any static host provider (netlify, surge, no
 - Integrate Firestore
 - Integrate Redux/Store
 - Integrate SCSS Complier
+- Markdown https://www.markdownguide.org/basic-syntax/
+- Remove Tailwind
+- Remove Windi
+- Build pages using bootstrap
+
+
