@@ -1,10 +1,10 @@
 ## using this turtorial [here](https://www.youtube.com/watch?v=pFEZLQ6DOf0)
 
 ```bash
->npm start
+> npm start
 ```
 
 ```bash
->npm install @solidjs/router
-#3:02 minutes
+> npm install @solidjs/router
 ```
+#8:40 minutes into the lecture
