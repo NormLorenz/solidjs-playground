@@ -1,4 +1,4 @@
-## using [this video](https://www.youtube.com/watch?v=pFEZLQ6DOf0)
+## using this turtorial [here](https://www.youtube.com/watch?v=pFEZLQ6DOf0)
 
 ```bash
 >npm start
