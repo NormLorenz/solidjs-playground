@@ -9,6 +9,7 @@ import styles from './App.module.css';
 
 const Home = lazy(() => import('./pages/Home'));
 const Users = lazy(() => import('./pages/Users'));
+const Error = lazy(() => import('./pages/Error'));
 
 const App: Component = () => {
   return (
@@ -19,17 +20,19 @@ const App: Component = () => {
         <A href='/'>Home</A>
         <A href='/sign-up'>Sign Up</A>
         <A href='/users'>Users</A>
+        <A href='/sdfsdf'>Error</A>
       </nav>
 
       <Routes>
         <Route path='/' component={Home} />
         <Route path='/users' component={Users} />
         <Route path={['login', 'sign-up']} element={<h1>This is the login/sign up screen</h1>} />
+        <Route path='**' component={Error} />
       </Routes>
 
       <header class={styles.header}>
         <img src={logo} class={styles.logo} alt="logo" />
-        <p>
+        {/* <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
@@ -39,8 +42,15 @@ const App: Component = () => {
           rel="noopener noreferrer"
         >
           Learn Solid
-        </a>
+        </a> */}
       </header>
+
+      {/* <Home>
+        <>
+        <h1>sdf</h1>
+        </>
+      </Home> */}
+
     </div>
   );
 };
