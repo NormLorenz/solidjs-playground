@@ -1,11 +1,6 @@
 import { Component, lazy } from 'solid-js';
-import { Routes, Route, A } from '@solidjs/router';
-
-// import logo from './logo.svg';
-import styles from './App.module.css';
-
-// import Home from './pages/Home';
-// import Users from './pages/Users';
+import { Routes, Route } from '@solidjs/router';
+import { Col, Container, Row, Nav } from 'solid-bootstrap';
 
 const Home = lazy(() => import('./pages/Home'));
 const Users = lazy(() => import('./pages/Users'));
@@ -13,54 +8,52 @@ const Error = lazy(() => import('./pages/Error'));
 
 const App: Component = () => {
   return (
+    <Container class="bg-light">
 
-    <div class={styles.App}>
+      <Row>
+        <Col class="border"></Col>
+        <Col class="border d-flex justify-content-center" xs={10} >
+          <Nav activeKey="#">
+            <Nav.Item>
+              <Nav.Link href="#/">Home</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#/login">Login</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#/users">Users</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#/error" disabled>Disabled</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#/dkdkdk">Force Error</Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Col>
+        <Col class="border"></Col>
+      </Row>
 
-      <h5>before navigation</h5>
+      <Row>
+        <Col class="border"></Col>
+        <Col class="border d-flex justify-content-center" xs={10} >
+          <Routes>
+            <Route path='/' component={Home} />
+            <Route path='/users' component={Users} />
+            <Route path={['login', 'sign-up']} element={<h1>This is the login/sign up screen</h1>} />
+            <Route path='**' component={Error} />
+          </Routes>
+        </Col>
+        <Col class="border"></Col>
+      </Row>
 
-      <nav class={styles.navigation}>
-        <A href='/'>Home</A>
-        <A href='/sign-up'>Sign Up</A>
-        <A href='/login'>Login</A>
-        <A href='/users'>Users</A>
-        <A href='/sdfsdf'>Error</A>
-        <A href='/jjjjjk'>Anottther Error</A>
-      </nav>
+      <Row>
+        <Col class="border d-flex justify-content-center">
+          Copyright © 2020 Water Street Works
+        </Col>
+      </Row>
 
-      <h5>after navigation</h5>
-      <h5>before routes</h5>
-
-      <Routes>
-        <Route path='/' component={Home} />
-        <Route path='/users' component={Users} />
-        <Route path={['login', 'sign-up']} element={<h1>This is the login/sign up screen</h1>} />
-        <Route path='**' component={Error} />
-      </Routes>
-
-      <h5>after routes</h5>
-
-      {/* <header class={styles.header}> */}
-      {/* <img src={logo} class={styles.logo} alt="logo" /> */}
-      {/* <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a> */}
-      {/* </header> */}
-
-      {/* <Home>
-        <>
-        <h1>sdf</h1>
-        </>
-      </Home> */}
-
-    </div>
+    </Container>
   );
 };
 

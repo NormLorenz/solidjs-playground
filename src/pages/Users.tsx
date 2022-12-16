@@ -1,13 +1,18 @@
 import { Component } from 'solid-js';
-
-import { Card, Button } from 'solid-bootstrap';
+import { Card, Button, Row, Col, Container } from 'solid-bootstrap';
 
 const Users: Component = () => {
   return (
-    <>
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-3">
+    <Container>
+
+      <Row>
+        <Col class="border d-flex justify-content-center">
           <h1>Users Page</h1>
+        </Col>
+      </Row>
+
+      <Row>
+        <Col class="border d-flex justify-content-center">
           <Card style={{ width: '20rem' }}>
             <Card.Img variant="top" src="/src/assets/german-compounds.jpg" />
             <Card.Body>
@@ -19,9 +24,10 @@ const Users: Component = () => {
               <Button variant="primary">Go somewhere</Button>
             </Card.Body>
           </Card>
-        </div>
-      </div>
-    </>
+        </Col>
+      </Row>
+
+    </Container>
   )
 }
 
