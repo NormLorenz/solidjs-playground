@@ -1,7 +1,7 @@
 import { Component, lazy } from 'solid-js';
 import { Routes, Route, A } from '@solidjs/router';
 
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import styles from './App.module.css';
 
 // import Home from './pages/Home';
@@ -16,12 +16,19 @@ const App: Component = () => {
 
     <div class={styles.App}>
 
+      <h5>before navigation</h5>
+
       <nav class={styles.navigation}>
         <A href='/'>Home</A>
         <A href='/sign-up'>Sign Up</A>
+        <A href='/login'>Login</A>
         <A href='/users'>Users</A>
         <A href='/sdfsdf'>Error</A>
+        <A href='/jjjjjk'>Anottther Error</A>
       </nav>
+
+      <h5>after navigation</h5>
+      <h5>before routes</h5>
 
       <Routes>
         <Route path='/' component={Home} />
@@ -30,9 +37,11 @@ const App: Component = () => {
         <Route path='**' component={Error} />
       </Routes>
 
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        {/* <p>
+      <h5>after routes</h5>
+
+      {/* <header class={styles.header}> */}
+      {/* <img src={logo} class={styles.logo} alt="logo" /> */}
+      {/* <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
@@ -43,7 +52,7 @@ const App: Component = () => {
         >
           Learn Solid
         </a> */}
-      </header>
+      {/* </header> */}
 
       {/* <Home>
         <>

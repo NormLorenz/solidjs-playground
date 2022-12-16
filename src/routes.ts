@@ -6,7 +6,7 @@ import Home from './pages/home';
 
 export const routes: RouteDefinition[] = [
   {
-    path: ['/', '/home'],
+    path: ['/'],
     component: Home,
     // data: AboutData,
     // children:
