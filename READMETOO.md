@@ -17,9 +17,12 @@
 - ~~move the solidjs graphic to the home page~~
 - why is the app.tsx style sheet called app.module.css
 - integrate a sass complier
-- use props in a component
-- pass props to the component from the route
-
+- pass props to a component
+- ~~use data as part of the route~~
+- implement a service that pulls a remote user data and/or avatar
+- ~~spinner~~
+- MSAL
+- config file
 
 ```bash
 # to launch the app

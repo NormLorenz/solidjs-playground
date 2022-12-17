@@ -24,13 +24,13 @@ const App: Component = () => {
               <Nav.Link href="#/users">Users</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#/about">About</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
               <Nav.Link href="#/error" disabled>Disabled</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#/hello">Force Error</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#/about">About</Nav.Link>
             </Nav.Item>
           </Nav>
         </Col>
