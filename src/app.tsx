@@ -1,10 +1,10 @@
-import { Component, lazy } from 'solid-js';
-import { Routes, Route } from '@solidjs/router';
+import { Component } from 'solid-js';
 import { Col, Container, Row, Nav } from 'solid-bootstrap';
+import { useRoutes } from '@solidjs/router';
 
-const Home = lazy(() => import('./pages/Home'));
-const Users = lazy(() => import('./pages/Users'));
-const Error = lazy(() => import('./pages/Error'));
+import { routes } from './routes';
+
+const Routes = useRoutes(routes);
 
 const App: Component = () => {
   return (
@@ -24,10 +24,13 @@ const App: Component = () => {
               <Nav.Link href="#/users">Users</Nav.Link>
             </Nav.Item>
             <Nav.Item>
+              <Nav.Link href="#/about">About</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
               <Nav.Link href="#/error" disabled>Disabled</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#/dkdkdk">Force Error</Nav.Link>
+              <Nav.Link href="#/hello">Force Error</Nav.Link>
             </Nav.Item>
           </Nav>
         </Col>
@@ -37,12 +40,7 @@ const App: Component = () => {
       <Row>
         <Col class="border"></Col>
         <Col class="border d-flex justify-content-center" xs={10} >
-          <Routes>
-            <Route path='/' component={Home} />
-            <Route path='/users' component={Users} />
-            <Route path={['login', 'sign-up']} element={<h1>This is the login/sign up screen</h1>} />
-            <Route path='**' component={Error} />
-          </Routes>
+          <Routes />
         </Col>
         <Col class="border"></Col>
       </Row>

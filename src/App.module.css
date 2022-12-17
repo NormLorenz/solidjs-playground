@@ -1,12 +1,12 @@
-.navigation {
+/* .navigation {
   padding: 30px;
   display: flex;
   justify-content: space-around;
-}
+} */
 
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .logo {
   animation: logo-spin infinite 20s linear;
@@ -14,7 +14,7 @@
   pointer-events: none;
 }
 
-.header {
+/* .header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -23,11 +23,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.link {
+/* .link {
   color: #b318f0;
-}
+} */
 
 @keyframes logo-spin {
   from {

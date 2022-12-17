@@ -5,7 +5,7 @@
 - toaster
 - dark/light themes
 - testing with jest
-- refactor router
+- ~~refactor router~~
 - shopping cart
 - local storage
 - global storage
@@ -17,6 +17,8 @@
 - ~~move the solidjs graphic to the home page~~
 - why is the app.tsx style sheet called app.module.css
 - integrate a sass complier
+- use props in a component
+- pass props to the component from the route
 
 
 ```bash
