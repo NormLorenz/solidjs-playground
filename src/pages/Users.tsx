@@ -1,7 +1,6 @@
-import { Component } from 'solid-js';
 import { Card, Button, Row, Col, Container } from 'solid-bootstrap';
 
-const Users: Component = () => {
+const Users = () => {
   return (
     <Container>
 

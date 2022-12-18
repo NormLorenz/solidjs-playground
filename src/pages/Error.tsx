@@ -1,12 +1,12 @@
-import { Component } from 'solid-js';
 import { Row, Col, Container } from 'solid-bootstrap';
 
-const Error: Component = () => {
+const Error = () => {
+
   return (
     <Container>
 
       <Row>
-        <Col class="border d-flex justify-content-center justify-text-center">
+        <Col class="border d-flex justify-content-center">
           <h1>Error Page</h1>
         </Col>
       </Row>

@@ -1,4 +1,4 @@
-# using the tutorial located [here](https://www.youtube.com/watch?v=pFEZLQ6DOf0)
+# Using the tutorial located [here](https://www.youtube.com/watch?v=pFEZLQ6DOf0)
 
 ## tasks
 - how to print a portion of the page
@@ -17,12 +17,21 @@
 - ~~move the solidjs graphic to the home page~~
 - why is the app.tsx style sheet called app.module.css
 - integrate a sass complier
-- pass props to a component
+- pass/emit props by a component
 - ~~use data as part of the route~~
 - implement a service that pulls a remote user data and/or avatar
 - ~~spinner~~
 - MSAL
-- config file
+- config json file
+- download bootstrap locally
+- ~~lazy loading~~
+- settings
+  - theme
+  - mode expert/novice
+  - todo list
+- refactor differences betwee components and functions
+
+A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.
 
 ```bash
 # to launch the app

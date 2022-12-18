@@ -3,6 +3,7 @@ import { lazy } from 'solid-js';
 
 import Home from './pages/home';
 import AboutData from './services/about.service';
+import UserData from './services/user.service';
 
 export const routes: RouteDefinition[] = [
   {
@@ -10,8 +11,17 @@ export const routes: RouteDefinition[] = [
     component: Home,
   },
   {
+    path: '/user',
+    component: lazy(() => import('./pages/User')),
+    data: UserData,
+  },
+  {
     path: '/users',
     component: lazy(() => import('./pages/Users')),
+  },
+  {
+    path: '/settings',
+    component: lazy(() => import('./pages/Settings')),
   },
   {
     path: '/about',

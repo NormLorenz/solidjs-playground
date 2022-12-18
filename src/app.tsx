@@ -1,4 +1,3 @@
-import { Component } from 'solid-js';
 import { Col, Container, Row, Nav } from 'solid-bootstrap';
 import { useRoutes } from '@solidjs/router';
 
@@ -6,7 +5,8 @@ import { routes } from './routes';
 
 const Routes = useRoutes(routes);
 
-const App: Component = () => {
+const App = () => {
+  
   return (
     <Container class="bg-light">
 
@@ -21,6 +21,9 @@ const App: Component = () => {
               <Nav.Link href="#/login">Login</Nav.Link>
             </Nav.Item>
             <Nav.Item>
+              <Nav.Link href="#/user">User</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
               <Nav.Link href="#/users">Users</Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -28,6 +31,9 @@ const App: Component = () => {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#/hello">Force Error</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#/settings">Settings</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#/about">About</Nav.Link>

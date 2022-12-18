@@ -1,6 +1,4 @@
-import { Component } from 'solid-js';
-
-const Auth: Component = () => {
+const Auth = () => {
   return <h1>Authentication Page</h1>
 }
 

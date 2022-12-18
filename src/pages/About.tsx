@@ -1,8 +1,8 @@
-import { Component, createEffect, Suspense } from 'solid-js';
+import { createEffect, Suspense } from 'solid-js';
 import { useRouteData } from '@solidjs/router';
 import { Col, Container, Row, Spinner } from 'solid-bootstrap';
 
-export default function About() {
+const About = () => {
   const name = useRouteData<() => string>();
 
   createEffect(() => {
@@ -38,3 +38,5 @@ export default function About() {
     </Container>
   );
 }
+
+export default About;
