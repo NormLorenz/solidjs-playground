@@ -26,12 +26,11 @@
 - download bootstrap locally
 - ~~lazy loading~~
 - settings 19:52, 22:05 23:15
-  - theme
-  - mode expert/novice
-  - todo list
-  - on settings page, enable or disable buttons based upon the store
-  - also relocate the createEffect listeners
-- refactor differences betwee components and functions
+  - ~~theme dark/light~~
+  - ~~mode expert/novice~~
+  - ~~on settings page, enable or disable buttons based upon the store~~
+  - ~~also relocate the createEffect listeners~~
+- refactor differences between components and functions
 
 A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.
 
