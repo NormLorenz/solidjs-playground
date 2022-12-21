@@ -1,16 +1,16 @@
 const Error = () => {
 
   return (
-    <div>
+    <div class="container">
 
-      <div>
-        <div class="border d-flex justify-content-center">
+      <div class="row">
+        <div class="col d-flex justify-content-center border">
           <h1>Error Page</h1>
         </div>
       </div>
 
-      <div>
-        <div class="border d-flex justify-content-center">
+      <div class="row">
+        <div class="col d-flex justify-content-center border">
           Some More Stuff
         </div>
       </div>

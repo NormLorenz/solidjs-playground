@@ -9,26 +9,34 @@ const About = () => {
   });
 
   return (
-    <div>
+    <div class="container">
 
-      <div>
-        <div class="border d-flex justify-content-center">
+      <div class="row">
+        <div class="col d-flex justify-content-center border">
           <h1>About Page</h1>
         </div>
       </div>
 
-      <div>
-        <div class="border d-flex justify-content-center">
+      <div class="row">
+        <div class="col d-flex justify-content-center border">
           <p>A page all about this website.</p>
         </div>
       </div>
 
-      <div>
-        <div class="border d-flex justify-content-center">
+      <div class="row">
+        <div class="col d-flex justify-content-center border">
           <p>
             <span>We love</span>
-            <Suspense fallback={<span>&nbsp;</span>}>
-              <span>&nbsp;{name}</span>
+            <Suspense fallback={
+              <span>
+                &nbsp;
+                <div class="spinner-border spinner-border-sm" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </span>}>
+              <span>
+                &nbsp;{name}
+              </span>
             </Suspense>
           </p>
         </div>

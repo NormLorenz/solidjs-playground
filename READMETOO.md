@@ -22,8 +22,8 @@
 - implement a service that pulls a remote user data and/or avatar
 - ~~spinner~~
 - MSAL
-- config json file
-- download bootstrap locally
+- config.json file
+- ~~download bootstrap locally~~
 - ~~lazy loading~~
 - settings 19:52, 22:05 23:15
   - ~~theme dark/light~~
@@ -32,8 +32,8 @@
   - ~~also relocate the createEffect listeners~~
 - refactor differences between components and functions
 - figure out why we are loading so much stuff on startup
-- convert to windi css
 - what the hell is the server component?
+- get rid of the users page and replace it with the about page
 
 A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.
 
@@ -47,10 +47,6 @@ A general Component has no implicit children prop. If desired, you can specify o
 > npm install @solidjs/router
 ```
 
-```bash
-# install solid-bootstrap
-> npm install solid-bootstrap
-```
 ## to refresh the site
 edit <code>src/App.tsx</code> and save to reload.
 
