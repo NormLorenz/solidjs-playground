@@ -31,6 +31,9 @@
   - ~~on settings page, enable or disable buttons based upon the store~~
   - ~~also relocate the createEffect listeners~~
 - refactor differences between components and functions
+- figure out why we are loading so much stuff on startup
+- convert to windi css
+- what the hell is the server component?
 
 A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.
 

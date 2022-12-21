@@ -4,6 +4,8 @@ import { useRoutes } from '@solidjs/router';
 import { routes } from './routes';
 import { createEffect, onMount } from 'solid-js';
 import Store from './store';
+// import * as data from './config.json';
+// import { default as config } from './config.json';
 
 const Routes = useRoutes(routes);
 const { localStorage } = window;
