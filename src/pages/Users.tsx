@@ -1,18 +1,17 @@
-import { Card, Button, Row, Col, Container } from 'solid-bootstrap';
 
 const Users = () => {
   return (
-    <Container>
+    <div>
 
-      <Row>
-        <Col class="border d-flex justify-content-center">
+      <div>
+        <div class="border d-flex justify-content-center">
           <h1>Users Page</h1>
-        </Col>
-      </Row>
+        </div>
+      </div>
 
-      <Row>
-        <Col class="border d-flex justify-content-center">
-          <Card style={{ width: '20rem' }}>
+      <div>
+        <div class="border d-flex justify-content-center">
+          {/* <Card style={{ width: '20rem' }}>
             <Card.Img variant="top" src="/src/assets/german-compounds.jpg" />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
@@ -20,13 +19,13 @@ const Users = () => {
                 Some quick example text to build on the card title and make up the bulk of
                 the card's content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <div variant="primary">Go somewhere</div>
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
+          </Card> */}
+        </div>
+      </div>
 
-    </Container>
+    </div>
   )
 }
 

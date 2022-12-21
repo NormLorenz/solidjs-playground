@@ -1,23 +1,21 @@
-import { Row, Col, Container } from 'solid-bootstrap';
-
 const Error = () => {
 
   return (
-    <Container>
+    <div>
 
-      <Row>
-        <Col class="border d-flex justify-content-center">
+      <div>
+        <div class="border d-flex justify-content-center">
           <h1>Error Page</h1>
-        </Col>
-      </Row>
+        </div>
+      </div>
 
-      <Row>
-        <Col class="border d-flex justify-content-center">
+      <div>
+        <div class="border d-flex justify-content-center">
           Some More Stuff
-        </Col>
-      </Row>
+        </div>
+      </div>
 
-    </Container>
+    </div>
   )
 }
 

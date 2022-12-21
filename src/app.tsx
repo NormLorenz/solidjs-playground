@@ -1,11 +1,8 @@
-import { Col, Container, Row, Nav } from 'solid-bootstrap';
 import { useRoutes } from '@solidjs/router';
 
 import { routes } from './routes';
 import { createEffect, onMount } from 'solid-js';
 import Store from './store';
-// import * as data from './config.json';
-// import { default as config } from './config.json';
 
 const Routes = useRoutes(routes);
 const { localStorage } = window;
@@ -40,56 +37,48 @@ const App = () => {
   });
 
   return (
-    <Container class="bg-light">
+    <div class="bg-light">
 
-      <Row>
-        <Col class="border"></Col>
-        <Col class="border d-flex justify-content-center" xs={10} >
-          <Nav activeKey="#">
-            <Nav.Item>
-              <Nav.Link href="#/">Home</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="#/login">Login</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="#/user">User</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="#/users">Users</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="#/error" disabled>Disabled</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="#/hello">Force Error</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="#/settings">Settings</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="#/about">About</Nav.Link>
-            </Nav.Item>
-          </Nav>
-        </Col>
-        <Col class="border"></Col>
-      </Row>
+      <div>
+        <div class="border"></div>
+        <div class="border d-flex justify-content-center" >
+          <ul>
+            <a href="#/">Home
+            </a>
+            <a href="#/login">Login
+            </a>
+            <a href="#/user">User
+            </a>
+            <a href="#/users">Users
+            </a>
+            <a href="#/error">Disabled
+            </a>
+            <a href="#/hello">Force Error
+            </a>
+            <a href="#/settings">Settings
+            </a>
+            <a href="#/about">About
+            </a>
+          </ul>
+        </div>
+        <div class="border"></div>
+      </div>
 
-      <Row>
-        <Col class="border"></Col>
-        <Col class="border d-flex justify-content-center" xs={10} >
+      <div>
+        <div class="border"></div>
+        <div class="border d-flex justify-content-center"  >
           <Routes />
-        </Col>
-        <Col class="border"></Col>
-      </Row>
+        </div>
+        <div class="border"></div>
+      </div>
 
-      <Row>
-        <Col class="border d-flex justify-content-center">
+      <div>
+        <div class="border d-flex justify-content-center">
           Copyright © 2022 Water Street Works
-        </Col>
-      </Row>
+        </div>
+      </div>
 
-    </Container>
+    </div>
   );
 };
 

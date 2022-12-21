@@ -1,25 +1,23 @@
-import { Container, Row, Col } from 'solid-bootstrap';
-
 import logo from '../logo.svg';
 import styles from '../App.module.css';
 
 const Home = () => {
   return (
-    <Container>
+    <div>
 
-      <Row>
-        <Col class="border d-flex justify-content-center">
+      <div>
+        <div class="border d-flex justify-content-center">
           <h1>Home Page</h1>
-        </Col>
-      </Row>
+        </div>
+      </div>
 
-      <Row>
-        <Col class="border d-flex justify-content-center">
+      <div>
+        <div class="border d-flex justify-content-center">
           <img src={logo} class={styles.logo} alt="logo" />
-        </Col>
-      </Row>
+        </div>
+      </div>
 
-    </Container>
+    </div>
   )
 }
 

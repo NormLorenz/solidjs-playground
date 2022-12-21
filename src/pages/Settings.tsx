@@ -1,4 +1,3 @@
-import { Button, Col, Container, Row } from "solid-bootstrap";
 import { createEffect } from "solid-js";
 
 import Store from '../store';
@@ -15,24 +14,24 @@ const Settings = () => {
   });
 
   return (
-    <Container>
+    <div>
 
-      <Row>
-        <Col class="border d-flex justify-content-center">
+      <div>
+        <div class="border d-flex justify-content-center">
           <h1>Settings Page</h1>
-        </Col>
-      </Row>
+        </div>
+      </div>
 
-      <Row>
-        <Col class="border d-flex justify-content-center">
-          <Button onClick={() => setStore({ theme: 'dark' })} disabled={store.theme === 'dark'}>Dark</Button>
-          <Button onClick={() => setStore({ theme: 'light' })} disabled={store.theme === 'light'}>Light</Button>
-          <Button onClick={() => setStore({ mode: 'expert' })} disabled={store.mode === 'expert'}>Expert</Button>
-          <Button onClick={() => setStore({ mode: 'novice' })} disabled={store.mode === 'novice'}>Novice</Button>
-        </Col>
-      </Row>
+      <div>
+        <div class="border d-flex justify-content-center">
+          {/* <div onClick={() => setStore({ theme: 'dark' })} disabled={store.theme === 'dark'}>Dark</div>
+          <div onClick={() => setStore({ theme: 'light' })} disabled={store.theme === 'light'}>Light</div>
+          <div onClick={() => setStore({ mode: 'expert' })} disabled={store.mode === 'expert'}>Expert</div>
+          <div onClick={() => setStore({ mode: 'novice' })} disabled={store.mode === 'novice'}>Novice</div> */}
+        </div>
+      </div>
 
-    </Container>
+    </div>
   );
 };
 
