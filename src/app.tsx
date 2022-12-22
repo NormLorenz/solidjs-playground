@@ -42,10 +42,7 @@ const App = () => {
       <div class="row">
         <nav class="navbar navbar-expand-lg bg-light">
           <div class="container-fluid">
-            {/* <a class="navbar-brand" href="#">
-              <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24" />
-            </a> */}
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#"><img src="/src/assets/solidjs.svg" alt="Solidjs" width="150px" height="120px" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -98,12 +95,25 @@ const App = () => {
       </div>
 
       <div class="row">
-        <div class="col"></div>
         <div class="col d-flex justify-content-center border"  >
           <Routes />
         </div>
-        <div class="col"></div>
       </div>
+
+      {/* <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use href="#bootstrap"></use></svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use href="#twitter"></use></svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use href="#instagram"></use></svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use href="#facebook"></use></svg></a></li>
+        </ul>
+      </footer> */}
 
       <div class="row">
         <div class="col d-flex justify-content-center border">

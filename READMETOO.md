@@ -34,6 +34,7 @@
 - figure out why we are loading so much stuff on startup
 - what the hell is the server component?
 - get rid of the users page and replace it with the about page
+- move home page logo to assets
 
 A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.
 
