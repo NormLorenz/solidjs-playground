@@ -7,8 +7,8 @@
 - testing with jest
 - ~~refactor router~~
 - shopping cart
-- local storage
-- global storage
+- ~~local storage~~
+- ~~global storage~~
 - ~~intall bootstrap - solid-bootstarp~~
 - firebase/firestore
 - bootstrap offcanvas
@@ -35,12 +35,13 @@
 - what the hell is the server component?
 - ~~get rid of the users page and replace it with the about page~~
 - ~~move home page logo to assets~~
-- to do list
+- to do list using global storage
 - resized menu not working
 - menu drop down not working
 - ~~build a footer fragment~~
 - ~~position footer at the bottom on the page~~
-- build a navigation fragment
+- ~~build a navigation fragment~~
+- 
 
 
 A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.
