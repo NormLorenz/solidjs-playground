@@ -38,7 +38,8 @@
 - to do list
 - resized menu not working
 - menu drop down not working
-- build a footer fragment
+- ~~build a footer fragment~~
+- ~~position footer at the bottom on the page~~
 - build a navigation fragment
 
 

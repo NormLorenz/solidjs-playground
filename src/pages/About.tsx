@@ -19,14 +19,8 @@ const About = () => {
 
       <div class="row">
         <div class="col d-flex justify-content-center border">
-          <p>This website was created to explore the capibilities of Solidjs.</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col d-flex justify-content-center border">
           <p>
-            <span>We love</span>
+            <span>This website was created to explore the capibilities of Solidjs. We love</span>
             <Suspense fallback={
               <span>&nbsp;<div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div></span>}>
               <span>&nbsp;{name}</span>
@@ -42,7 +36,7 @@ const About = () => {
             <div class="card-body">
               <h5 class="card-title">Compound Words</h5>
               <p class="card-text">German Compound Words!</p>
-              <a href="#" class="btn btn-primary">Go home</a>
+              <a href="#" class="btn btn-primary">Go to home</a>
             </div>
           </div>
         </div>

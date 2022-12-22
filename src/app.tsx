@@ -3,6 +3,7 @@ import { createEffect, onMount } from 'solid-js';
 
 import { routes } from './routes';
 import Store from './store';
+import Footer from './fragments/Footer';
 
 const Routes = useRoutes(routes);
 const { localStorage } = window;
@@ -59,7 +60,7 @@ const App = () => {
                   <a class="nav-link active" aria-current="page" href="#/settings">Settings</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#/wwww">404 Error</a>
+                  <a class="nav-link active" aria-current="page" href="#/404">404 Error</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#/user">User</a>
@@ -97,24 +98,9 @@ const App = () => {
         </div>
       </div>
 
-      {/* <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-            <svg class="bi" width="30" height="24"><use href="#bootstrap"></use></svg>
-          </a>
-          <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
-        </div>
-
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use href="#twitter"></use></svg></a></li>
-          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use href="#instagram"></use></svg></a></li>
-          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use href="#facebook"></use></svg></a></li>
-        </ul>
-      </footer> */}
-
       <div class="row">
-        <div class="col d-flex justify-content-center border">
-          Copyright © 2022 Water Street Works
+        <div class="col d-flex justify-content-center border fixed-bottom">
+          <Footer />
         </div>
       </div>
 
