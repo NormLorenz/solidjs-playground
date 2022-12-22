@@ -40,17 +40,19 @@ const App = () => {
 
   return (
     <div class="container bg-light">
-      <div class="row">
-        <Menu />
+      <div class="row pt-2">
+        <div>
+          <Menu />
+        </div>
       </div>
 
-      <div class="row">
+      <div class="row pt-2">
         <div class="col d-flex justify-content-center border">
           <Routes />
         </div>
       </div>
 
-      <div class="row">
+      <div class="row pt-2">
         <div class="col d-flex justify-content-center border fixed-bottom">
           <Footer />
         </div>

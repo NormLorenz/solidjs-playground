@@ -5,13 +5,13 @@ const Home = () => {
   return (
     <div class="container">
 
-      <div class="row">
+      <div class="row pt-2">
         <div class="col d-flex justify-content-center border">
           <h1>Home Page</h1>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row pt-2">
         <div class="col d-flex justify-content-center border">
           <img src={logo} class={styles.logo} alt="logo" />
         </div>

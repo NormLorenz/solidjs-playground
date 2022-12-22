@@ -10,18 +10,18 @@ const User = () => {
   return (
     <div class="container">
 
-      <div class="row">
+      <div class="row pt-2">
         <div class="col d-flex justify-content-center border">
           <h1>Star War's User Page</h1>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row pt-2">
         <label for="exampleFormControlInput1" class="form-label">User Identification Number</label>
         <input type="number" min="1" class="form-control" id="exampleFormControlInput1" placeholder="1 ... 75" onInput={(e) => setUserId(e.currentTarget.value)} />
       </div>
 
-      <div class="row">
+      <div class="row pt-2">
         <div class="card">
           <span>{user.loading && "Loading..."}</span>
           <div>
