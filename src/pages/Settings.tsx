@@ -24,10 +24,10 @@ const Settings = () => {
 
       <div class="row">
         <div class="col d-flex justify-content-center border">
-          <button type="button" class="btn btn-success" onClick={() => setStore({ theme: 'dark' })} disabled={store.theme === 'dark'}>Dark</button>
-          <button type="button" class="btn btn-success" onClick={() => setStore({ theme: 'light' })} disabled={store.theme === 'light'}>Light</button>
-          <button type="button" class="btn btn-success" onClick={() => setStore({ mode: 'expert' })} disabled={store.mode === 'expert'}>Expert</button>
-          <button type="button" class="btn btn-success" onClick={() => setStore({ mode: 'novice' })} disabled={store.mode === 'novice'}>Novice</button>
+          <button type="button" class="btn btn-outline-primary" onClick={() => setStore({ theme: 'dark' })} disabled={store.theme === 'dark'}>Dark</button>
+          <button type="button" class="btn btn-outline-primary" onClick={() => setStore({ theme: 'light' })} disabled={store.theme === 'light'}>Light</button>
+          <button type="button" class="btn btn-outline-primary" onClick={() => setStore({ mode: 'expert' })} disabled={store.mode === 'expert'}>Expert</button>
+          <button type="button" class="btn btn-outline-primary" onClick={() => setStore({ mode: 'novice' })} disabled={store.mode === 'novice'}>Novice</button>
         </div>
       </div>
 

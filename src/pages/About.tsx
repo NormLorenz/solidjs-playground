@@ -36,7 +36,7 @@ const About = () => {
             <div class="card-body">
               <h5 class="card-title">Compound Words</h5>
               <p class="card-text">German Compound Words!</p>
-              <a href="#" class="btn btn-primary">Go to home</a>
+              <a href="#" class="btn btn-outline-primary">Go to home</a>
             </div>
           </div>
         </div>
