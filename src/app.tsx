@@ -1,7 +1,7 @@
 import { useRoutes } from '@solidjs/router';
+import { createEffect, onMount } from 'solid-js';
 
 import { routes } from './routes';
-import { createEffect, onMount } from 'solid-js';
 import Store from './store';
 
 const Routes = useRoutes(routes);
@@ -59,13 +59,10 @@ const App = () => {
                   <a class="nav-link active" aria-current="page" href="#/settings">Settings</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#/error">Error</a>
+                  <a class="nav-link active" aria-current="page" href="#/wwww">404 Error</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#/user">User</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#/users">Users</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link disabled">Disabled</a>

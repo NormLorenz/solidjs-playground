@@ -16,10 +16,6 @@ export const routes: RouteDefinition[] = [
     data: UserData,
   },
   {
-    path: '/users',
-    component: lazy(() => import('./pages/Users')),
-  },
-  {
     path: '/settings',
     component: lazy(() => import('./pages/Settings')),
   },
