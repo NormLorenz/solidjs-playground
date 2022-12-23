@@ -61,6 +61,12 @@ A general Component has no implicit children prop. If desired, you can specify o
 > npm install @solidjs/router
 ```
 
+```bash
+# install bootstrap
+> npm install bootstrap
+> npm install bootstrap-icons
+```
+
 ## to refresh the site
 edit <code>src/App.tsx</code> and save to reload.
 

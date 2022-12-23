@@ -37,7 +37,7 @@ const Tasks = () => {
   setStore({
     tasks: [...store.tasks, { id: 4, name: 'write code', date: new Date('2021-03-07'), completed: false }]
   });
-  
+
   // remove a task
   // const newlist = store.tasks.filter(task => { return task.id != 2; });
   // setStore({
@@ -70,7 +70,18 @@ const Tasks = () => {
       <div class="row pt-2">
         <div class="col d-flex justify-content-center border">
           <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Completed</th>
+                {/* <th scope="col"></th> */}
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
             <tbody>
+
               <For each={store.tasks}>
                 {(task, i) => (
                   <tr>
@@ -78,8 +89,11 @@ const Tasks = () => {
                     <td>{task.name}</td>
                     <td>{task.date.toDateString()}</td>
                     <td>{task.completed.toString()}</td>
-                    <td>{i}</td>
-                    <td>x</td>
+                    {/* <td>{i}</td> */}
+                    <td>
+                      <img src="/src/assets/checked.svg" alt="Finished" width="16" height="16" />&nbsp;&nbsp;&nbsp;
+                      <img src="/src/assets/trash.svg" alt="Delete" width="16" height="16" />
+                    </td>
                   </tr>
                 )}
               </For>
