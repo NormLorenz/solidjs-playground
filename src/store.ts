@@ -7,6 +7,7 @@ interface AppStore {
 }
 
 interface Task {
+  id: number,
   name: string,
   date: Date,
   completed: boolean,

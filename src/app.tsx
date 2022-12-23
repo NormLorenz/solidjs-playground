@@ -14,8 +14,6 @@ const App = () => {
 
   onMount(() => {
 
-    console.log('onMount');
-
     // initialize local storage if necessary
     const settings = { mode: 'novice', theme: 'light' };
     if (localStorage.getItem('settings') === null) {

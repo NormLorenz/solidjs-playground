@@ -4,11 +4,10 @@ import Store from '../store';
 
 const Settings = () => {
 
+  // destructure store
   const [store, setStore] = Store;
 
   createEffect(() => {
-    console.log('mode 2: ', store.mode);
-    console.log('theme 2: ', store.theme);
     const settings = { mode: store.mode, theme: store.theme };
     localStorage.setItem('settings', JSON.stringify(settings));
   });
