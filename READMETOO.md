@@ -35,13 +35,15 @@
 - what the hell is the server component?
 - ~~get rid of the users page and replace it with the about page~~
 - ~~move home page logo to assets~~
-- to do list using global storage
 - resized menu not working
 - menu drop down not working
 - ~~build a footer fragment~~
 - ~~position footer at the bottom on the page~~
 - ~~build a navigation fragment~~
-- 
+- tasks list using global storage
+- build out the settings page
+- server
+- footer needs work
 
 
 A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.

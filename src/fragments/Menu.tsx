@@ -26,6 +26,9 @@ const Menu = () => {
               <a class="nav-link active" aria-current="page" href="#/user">User</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#/tasks">Tasks</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link disabled">Disabled</a>
             </li>
             <li class="nav-item dropdown">
