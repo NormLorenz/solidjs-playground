@@ -47,6 +47,7 @@
 - footer needs work
 - build a utility class for creating updating local storage
 - build a utility class for creating updating global storage
+- style the site
 
 
 A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.

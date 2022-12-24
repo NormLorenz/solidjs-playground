@@ -1,22 +1,24 @@
-// https://www.solidjs.com/examples/todos - this version uses local and global storage
-// https://www.solidjs.com/examples/simpletodos - this version uses local storage
-
 // this list of tasks only lasts as long as the browser session is open
 
-import { batch, createSignal, For } from "solid-js";
+// import { batch, createSignal, For } from "solid-js";
+import { For } from "solid-js";
+import { createStore } from "solid-js/store";
 import { v4 as uuidv4 } from 'uuid';
 
 import Store, { Task } from '../store';
-import { createLocalStore, removeIndex } from "../utils";
+// import { createLocalStore, removeIndex } from "../utils";
 
-type TodoItem = {
-  title: string; done: boolean
-};
+// type TodoItem = {
+//   title: string; done: boolean
+// };
 
 const Tasks = () => {
 
   // destructure store
   const [store, setStore] = Store;
+  // const [fields, setFields] = createStore();
+
+  let nameFormControl: HTMLInputElement;
 
   // initialize tasks
   if (store.tasks.length === 0) {
@@ -30,19 +32,19 @@ const Tasks = () => {
     });
   }
 
-  const bob = (a: number) => a + 100;
+  // const bob = (a: number) => a + 100;
 
   // new task
-  const createTask = () => {
-    const task: Task = { id: uuidv4(), name: 'clean kitty litter box', date: new Date(), completed: false };
+  const createTask = (name: string) => {
+    const task: Task = { id: uuidv4(), name: name, date: new Date(), completed: false };
     setStore({
       tasks: [...store.tasks, task]
     });
   };
 
   // delete task
-  const deleteTask = () => {
-    const tasks = store.tasks.filter(task => { return task.id != 'f514156a-1c0f-4173-b12d-b1adef669a11'; });
+  const deleteTask = (id: string) => {
+    const tasks = store.tasks.filter(task => { return task.id != id; });
     setStore({
       tasks: tasks
     });
@@ -50,25 +52,22 @@ const Tasks = () => {
 
   // complete task
   const completeTask = () => {
-    const tasks = store.tasks.filter(task => { return task.id != 'f514156a-1c0f-4173-b12d-b1adef669a11'; });
-    setStore({
-      tasks: tasks
-    });
+    // to be determined
   };
 
-  const [newTitle, setTitle] = createSignal("");
-  const [todos, setTodos] = createLocalStore<TodoItem[]>("todos", []);
+  // const [newTitle, setTitle] = createSignal("");
+  // const [todos, setTodos] = createLocalStore<TodoItem[]>("todos", []);
 
-  const addTodo = (e: SubmitEvent) => {
-    e.preventDefault();
-    batch(() => {
-      setTodos(todos.length, {
-        title: newTitle(),
-        done: false,
-      });
-      setTitle("");
-    });
-  };
+  // const addTodo = (e: SubmitEvent) => {
+  //   e.preventDefault();
+  //   batch(() => {
+  //     setTodos(todos.length, {
+  //       title: newTitle(),
+  //       done: false,
+  //     });
+  //     setTitle("");
+  //   });
+  // };
 
   return (
     <div class="container">
@@ -81,8 +80,10 @@ const Tasks = () => {
 
       <div class="row pt-2">
         <div class="col d-flex justify-content-center border">
-          <button class="btn btn-outline-primary" onClick={() => createTask()}>Create a task</button>
-          <button class="btn btn-outline-primary" onClick={() => deleteTask()}>Delete a task</button>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" id="nameFormControl" type="text" placeholder="A task name" aria-label="Name" required />
+            <button class="btn btn-outline-primary" onClick={() => createTask('wash car')}>Create</button>
+          </form>
         </div>
       </div>
 
@@ -108,7 +109,7 @@ const Tasks = () => {
                     <td>{task.completed.toString()}</td>
                     <td>
                       <img src="/src/assets/checked.svg" alt="Finished" width="24" height="24" />&nbsp;&nbsp;&nbsp;
-                      <img src="/src/assets/trash.svg" alt="Delete" width="24" height="24" />
+                      <img src="/src/assets/trash.svg" onclick={() => deleteTask(task.id)} alt="Delete" width="24" height="24" />
                     </td>
                   </tr>
                 )}
@@ -118,7 +119,7 @@ const Tasks = () => {
         </div>
       </div>
 
-      <div class="row pt-2">
+      {/* <div class="row pt-2">
         <div class="col d-flex justify-content-center border">
 
           <form onSubmit={addTodo}>
@@ -137,7 +138,7 @@ const Tasks = () => {
           </For>
 
         </div>
-      </div>
+      </div> */}
 
     </div >
   )
