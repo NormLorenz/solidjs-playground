@@ -2,6 +2,7 @@ import { Suspense } from 'solid-js';
 import { useRouteData } from '@solidjs/router';
 
 const About = () => {
+  
   const name = useRouteData<() => string>();
 
   return (

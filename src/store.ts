@@ -6,8 +6,8 @@ interface AppStore {
   tasks: Task[],
 }
 
-interface Task {
-  id: number,
+export interface Task {
+  id: string,
   name: string,
   date: Date,
   completed: boolean,

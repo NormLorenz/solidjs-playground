@@ -1,10 +1,12 @@
 // https://www.solidjs.com/examples/todos - this version uses local and global storage
 // https://www.solidjs.com/examples/simpletodos - this version uses local storage
 
-// this list of tasks only lasts as long as the browser session
+// this list of tasks only lasts as long as the browser session is open
 
 import { batch, createSignal, For } from "solid-js";
-import Store from '../store';
+import { v4 as uuidv4 } from 'uuid';
+
+import Store, { Task } from '../store';
 import { createLocalStore, removeIndex } from "../utils";
 
 type TodoItem = {
@@ -17,32 +19,42 @@ const Tasks = () => {
   const [store, setStore] = Store;
 
   // initialize tasks
-  // setStore({
-  //   tasks: [
-  //     { id: 0, name: 'vacuum living room', date: new Date, completed: false },
-  //     { id: 1, name: 'clean toilet', date: new Date, completed: true },
-  //   ]
-  // });
+  if (store.tasks.length === 0) {
+    setStore({
+      tasks: [
+        { id: 'de5435fb-4c87-4f19-91e1-b0b3c761198c', name: 'vacuum kitchen', date: new Date('2022-11-10'), completed: false },
+        { id: 'f514156a-1c0f-4173-b12d-b1adef669a11', name: 'clean toilet', date: new Date(), completed: true },
+        { id: '9053c080-eff7-4135-be66-744915904796', name: 'wash face', date: new Date('2019-12-25'), completed: false },
+        { id: '1e9f41e5-09e1-475f-99a9-38520061a1b3', name: 'write code', date: new Date('2021-03-07'), completed: false },
+      ]
+    });
+  }
 
-  // add new tasks
-  setStore({
-    tasks: [...store.tasks, { id: 1, name: 'vacuum kitchen', date: new Date(), completed: false }]
-  });
-  setStore({
-    tasks: [...store.tasks, { id: 2, name: 'clean toilet', date: new Date(), completed: true }]
-  });
-  setStore({
-    tasks: [...store.tasks, { id: 3, name: 'wash face', date: new Date(), completed: false }]
-  });
-  setStore({
-    tasks: [...store.tasks, { id: 4, name: 'write code', date: new Date('2021-03-07'), completed: false }]
-  });
+  const bob = (a: number) => a + 100;
 
-  // remove a task
-  // const newlist = store.tasks.filter(task => { return task.id != 2; });
-  // setStore({
-  //   tasks: newlist
-  // });
+  // new task
+  const createTask = () => {
+    const task: Task = { id: uuidv4(), name: 'clean kitty litter box', date: new Date(), completed: false };
+    setStore({
+      tasks: [...store.tasks, task]
+    });
+  };
+
+  // delete task
+  const deleteTask = () => {
+    const tasks = store.tasks.filter(task => { return task.id != 'f514156a-1c0f-4173-b12d-b1adef669a11'; });
+    setStore({
+      tasks: tasks
+    });
+  };
+
+  // complete task
+  const completeTask = () => {
+    const tasks = store.tasks.filter(task => { return task.id != 'f514156a-1c0f-4173-b12d-b1adef669a11'; });
+    setStore({
+      tasks: tasks
+    });
+  };
 
   const [newTitle, setTitle] = createSignal("");
   const [todos, setTodos] = createLocalStore<TodoItem[]>("todos", []);
@@ -69,6 +81,13 @@ const Tasks = () => {
 
       <div class="row pt-2">
         <div class="col d-flex justify-content-center border">
+          <button class="btn btn-outline-primary" onClick={() => createTask()}>Create a task</button>
+          <button class="btn btn-outline-primary" onClick={() => deleteTask()}>Delete a task</button>
+        </div>
+      </div>
+
+      <div class="row pt-2">
+        <div class="col d-flex justify-content-center border">
           <table class="table table-striped">
             <thead>
               <tr>
@@ -76,12 +95,10 @@ const Tasks = () => {
                 <th scope="col">Name</th>
                 <th scope="col">Date</th>
                 <th scope="col">Completed</th>
-                {/* <th scope="col"></th> */}
                 <th scope="col">Actions</th>
               </tr>
             </thead>
             <tbody>
-
               <For each={store.tasks}>
                 {(task, i) => (
                   <tr>
@@ -89,10 +106,9 @@ const Tasks = () => {
                     <td>{task.name}</td>
                     <td>{task.date.toDateString()}</td>
                     <td>{task.completed.toString()}</td>
-                    {/* <td>{i}</td> */}
                     <td>
-                      <img src="/src/assets/checked.svg" alt="Finished" width="16" height="16" />&nbsp;&nbsp;&nbsp;
-                      <img src="/src/assets/trash.svg" alt="Delete" width="16" height="16" />
+                      <img src="/src/assets/checked.svg" alt="Finished" width="24" height="24" />&nbsp;&nbsp;&nbsp;
+                      <img src="/src/assets/trash.svg" alt="Delete" width="24" height="24" />
                     </td>
                   </tr>
                 )}
