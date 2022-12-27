@@ -1,7 +1,6 @@
-// this list of tasks only lasts as long as the browser session is open
+// this list of tasks that only lasts as long as the browser session is open
 
 import { For } from "solid-js";
-import { produce } from "solid-js/store";
 import { v4 as uuidv4 } from 'uuid';
 
 import Store, { Task } from '../store';
@@ -25,9 +24,10 @@ const Tasks = () => {
     });
   }
 
-  // new task
-  const createTask = (name: string | any) => {
-    // fix refresh issue
+  // https://www.solidjs.com/tutorial/stores_createstore
+
+  // add task
+  const addTask = (name: string | any) => {
     const task: Task = { id: uuidv4(), name: name, date: new Date(), completed: false };
     setStore({
       tasks: [...store.tasks, task]
@@ -42,19 +42,13 @@ const Tasks = () => {
     });
   };
 
-  // complete task
+  // toggle task
   const toggleTask = (id: string) => {
-
-    // const toggleTodo = (id) => {
-    //   setTodos(todo => todo.id === id, "completed", completed => !completed);
-    // }
-
-    // const tasks = store.tasks.filter(task => { return task.id != id; });
-
-    // setStore({
-    //   tasks: tasks => task.id === id, "completed", completed => ! completed);
-    // });
-
+    setStore({
+      tasks: store.tasks.map((task) => (
+        task.id !== id ? task : { ...task, completed: !task.completed }
+      ))
+    })
   };
 
   return (
@@ -71,7 +65,7 @@ const Tasks = () => {
           <form class="d-flex" role="search">
             <input class="form-control me-2" id="nameField" onChange={(e) => nameField = e.currentTarget.value} type="text"
               placeholder="A task name" aria-label="Name" required />
-            <button class="btn btn-outline-primary" onClick={() => createTask(nameField)}>Create</button>
+            <button class="btn btn-outline-primary" onClick={() => addTask(nameField)}>Create</button>
           </form>
         </div>
       </div>
@@ -93,7 +87,7 @@ const Tasks = () => {
                 {(task, i) => (
                   <tr>
                     <td>{task.id}</td>
-                    <td>{task.name}</td>
+                    <td><span style={{ "text-decoration": task.completed ? "line-through" : "none" }}>{task.name}</span></td>
                     <td>{task.date.toDateString()}</td>
                     <td>{task.completed.toString()}</td>
                     <td>
