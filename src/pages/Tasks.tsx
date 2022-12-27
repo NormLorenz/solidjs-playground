@@ -1,24 +1,17 @@
 // this list of tasks only lasts as long as the browser session is open
 
-// import { batch, createSignal, For } from "solid-js";
 import { For } from "solid-js";
-import { createStore } from "solid-js/store";
+import { produce } from "solid-js/store";
 import { v4 as uuidv4 } from 'uuid';
 
 import Store, { Task } from '../store';
-// import { createLocalStore, removeIndex } from "../utils";
-
-// type TodoItem = {
-//   title: string; done: boolean
-// };
 
 const Tasks = () => {
 
   // destructure store
   const [store, setStore] = Store;
-  // const [fields, setFields] = createStore();
 
-  let nameFormControl: HTMLInputElement;
+  let nameField: string;
 
   // initialize tasks
   if (store.tasks.length === 0) {
@@ -32,10 +25,9 @@ const Tasks = () => {
     });
   }
 
-  // const bob = (a: number) => a + 100;
-
   // new task
-  const createTask = (name: string) => {
+  const createTask = (name: string | any) => {
+    // fix refresh issue
     const task: Task = { id: uuidv4(), name: name, date: new Date(), completed: false };
     setStore({
       tasks: [...store.tasks, task]
@@ -51,23 +43,19 @@ const Tasks = () => {
   };
 
   // complete task
-  const completeTask = () => {
-    // to be determined
+  const toggleTask = (id: string) => {
+
+    // const toggleTodo = (id) => {
+    //   setTodos(todo => todo.id === id, "completed", completed => !completed);
+    // }
+
+    // const tasks = store.tasks.filter(task => { return task.id != id; });
+
+    // setStore({
+    //   tasks: tasks => task.id === id, "completed", completed => ! completed);
+    // });
+
   };
-
-  // const [newTitle, setTitle] = createSignal("");
-  // const [todos, setTodos] = createLocalStore<TodoItem[]>("todos", []);
-
-  // const addTodo = (e: SubmitEvent) => {
-  //   e.preventDefault();
-  //   batch(() => {
-  //     setTodos(todos.length, {
-  //       title: newTitle(),
-  //       done: false,
-  //     });
-  //     setTitle("");
-  //   });
-  // };
 
   return (
     <div class="container">
@@ -81,8 +69,9 @@ const Tasks = () => {
       <div class="row pt-2">
         <div class="col d-flex justify-content-center border">
           <form class="d-flex" role="search">
-            <input class="form-control me-2" id="nameFormControl" type="text" placeholder="A task name" aria-label="Name" required />
-            <button class="btn btn-outline-primary" onClick={() => createTask('wash car')}>Create</button>
+            <input class="form-control me-2" id="nameField" onChange={(e) => nameField = e.currentTarget.value} type="text"
+              placeholder="A task name" aria-label="Name" required />
+            <button class="btn btn-outline-primary" onClick={() => createTask(nameField)}>Create</button>
           </form>
         </div>
       </div>
@@ -108,7 +97,7 @@ const Tasks = () => {
                     <td>{task.date.toDateString()}</td>
                     <td>{task.completed.toString()}</td>
                     <td>
-                      <img src="/src/assets/checked.svg" alt="Finished" width="24" height="24" />&nbsp;&nbsp;&nbsp;
+                      <img src="/src/assets/checked.svg" onclick={() => toggleTask(task.id)} alt="Finished" width="24" height="24" />&nbsp;&nbsp;&nbsp;
                       <img src="/src/assets/trash.svg" onclick={() => deleteTask(task.id)} alt="Delete" width="24" height="24" />
                     </td>
                   </tr>
@@ -118,27 +107,6 @@ const Tasks = () => {
           </table>
         </div>
       </div>
-
-      {/* <div class="row pt-2">
-        <div class="col d-flex justify-content-center border">
-
-          <form onSubmit={addTodo}>
-            <input placeholder="Enter a todo and click +" required value={newTitle()} onInput={(e) => setTitle(e.currentTarget.value)} />
-            <button>+</button>
-          </form>
-
-          <For each={todos}>
-            {(todo, i) => (
-              <div>
-                <input type="checkbox" checked={todo.done} onChange={(e) => setTodos(i(), "done", e.currentTarget.checked)} />
-                <input type="text" value={todo.title} onChange={(e) => setTodos(i(), "title", e.currentTarget.value)} />
-                <button onClick={() => setTodos((t) => removeIndex(t, i()))}>x</button>
-              </div>
-            )}
-          </For>
-
-        </div>
-      </div> */}
 
     </div >
   )

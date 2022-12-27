@@ -17,8 +17,11 @@ const User = () => {
       </div>
 
       <div class="row pt-2">
-        <label for="exampleFormControlInput1" class="form-label">User Identification Number</label>
-        <input type="number" min="1" class="form-control" id="exampleFormControlInput1" placeholder="1 ... 75" onInput={(e) => setUserId(e.currentTarget.value)} />
+        <div class="col d-flex justify-content-center border">
+          <form class="d-flex" role="search">
+            <input type="number" min="1" class="form-control me-2" id="numberField" placeholder="A number between 1 ... 75" onInput={(e) => setUserId(e.currentTarget.value)} />
+          </form>
+        </div>
       </div>
 
       <div class="row pt-2">
