@@ -29,14 +29,6 @@ const App: Component = () => {
     }
   });
 
-  // move to settings
-  createEffect(() => {
-    console.log('mode: ', store.mode);
-    console.log('theme: ', store.theme);
-    const settings = { mode: store.mode, theme: store.theme };
-    localStorage.setItem('settings', JSON.stringify(settings));
-  });
-
   return (
     <div class="container bg-light">
       <div class="row pt-2">
