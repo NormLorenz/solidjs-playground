@@ -1,5 +1,5 @@
 import { useRoutes } from '@solidjs/router';
-import { createEffect, onMount } from 'solid-js';
+import { Component, createEffect, onMount } from 'solid-js';
 
 import { routes } from './routes';
 import Store from './store';
@@ -10,7 +10,7 @@ const Routes = useRoutes(routes);
 const { localStorage } = window;
 const [store, setStore] = Store;
 
-const App = () => {
+const App: Component = () => {
 
   onMount(() => {
 
@@ -29,6 +29,7 @@ const App = () => {
     }
   });
 
+  // move to settings
   createEffect(() => {
     console.log('mode: ', store.mode);
     console.log('theme: ', store.theme);

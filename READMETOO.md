@@ -15,7 +15,7 @@
 - linter
 - google chart
 - ~~move the solidjs graphic to the home page~~
-- why is the app.tsx style sheet called app.module.css
+- ~~why is the app.tsx style sheet called app.module.css~~
 - integrate a sass complier
 - pass/emit props by a component
 - ~~use data as part of the route~~
@@ -25,7 +25,6 @@
 - config.json file
 - ~~download bootstrap locally~~
 - ~~lazy loading~~
-- settings 19:52, 22:05 23:15
   - ~~theme dark/light~~
   - ~~mode expert/novice~~
   - ~~on settings page, enable or disable buttons based upon the store~~
@@ -35,8 +34,9 @@
 - what the hell is the server component?
 - ~~get rid of the users page and replace it with the about page~~
 - ~~move home page logo to assets~~
-- resized menu not working
-- menu drop down not working
+- menu
+  - resized menu not working
+  - menu drop down not working
 - ~~build a footer fragment~~
 - ~~position footer at the bottom on the page~~
 - ~~build a navigation fragment~~
@@ -48,6 +48,18 @@
 - build a utility class for creating updating local storage
 - build a utility class for creating updating global storage
 - style the site
+- Tasks page
+  - clear input box after use - check tutorial by ebinezer
+  - refresh issue after adding new task
+- ~~Move and rename app.module.css file to Home.module.css~~
+- ~~Remove app.css file~~
+- ~~Remove index.css file~~
+- nav-link active attribute
+- solidjs vscode extension
+- should I be using Component type on all classes?
+- new page for github
+- move create effect to settings.tsx
+- refactor local storage to theme, mode, tasks
 
 
 A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.

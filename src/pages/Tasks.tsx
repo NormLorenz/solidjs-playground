@@ -27,7 +27,7 @@ const Tasks = () => {
   // https://www.solidjs.com/tutorial/stores_createstore
 
   // add task
-  const addTask = (name: string | any) => {
+  const addTask = (name: string) => {
     const task: Task = { id: uuidv4(), name: name, date: new Date(), completed: false };
     setStore({
       tasks: [...store.tasks, task]

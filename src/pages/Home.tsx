@@ -1,5 +1,5 @@
 import logo from '../assets/logo.svg';
-import styles from '../App.module.css';
+import styles from './Home.module.css';
 
 const Home = () => {
   return (
