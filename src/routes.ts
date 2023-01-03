@@ -20,6 +20,10 @@ export const routes: RouteDefinition[] = [
     component: lazy(() => import('./pages/Settings')),
   },
   {
+    path: '/sullivans',
+    component: lazy(() => import('./pages/Sullivans')),
+  },
+  {
     path: '/about',
     component: lazy(() => import('./pages/About')),
     data: AboutData,

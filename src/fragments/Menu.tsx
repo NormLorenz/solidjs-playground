@@ -17,6 +17,9 @@ const Menu = () => {
               <a class="nav-link active" aria-current="page" href="#login">Login</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#sullivans">Sullivans</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#/settings">Settings</a>
             </li>
             <li class="nav-item">

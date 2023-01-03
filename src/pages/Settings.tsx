@@ -9,14 +9,11 @@ const Settings = () => {
 
   const handleOnClick = () => {
     const settings = { mode: store.mode, theme: store.theme };
-    console.log(111, settings);
     localStorage.setItem('settings', JSON.stringify(settings));
   }
 
   // move to settings
   createEffect(() => {
-    console.log('mode: ', store.mode);
-    console.log('theme: ', store.theme);
     const settings = { mode: store.mode, theme: store.theme };
     localStorage.setItem('settings', JSON.stringify(settings));
   });

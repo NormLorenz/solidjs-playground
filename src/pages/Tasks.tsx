@@ -13,7 +13,7 @@ const Tasks = () => {
   let nameField: string;
 
   // initialize tasks
-  if (store.tasks.length === 0) {
+  if (store.tasks.length === 99) {
     setStore({
       tasks: [
         { id: 'de5435fb-4c87-4f19-91e1-b0b3c761198c', name: 'vacuum kitchen', date: new Date('2022-11-10'), completed: false },

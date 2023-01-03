@@ -14,6 +14,8 @@ const App: Component = () => {
 
   onMount(() => {
 
+    console.log('onMount ', new Date());
+
     // initialize local storage if necessary
     const settings = { mode: 'novice', theme: 'light' };
     if (localStorage.getItem('settings') === null) {
