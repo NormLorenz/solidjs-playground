@@ -80,6 +80,11 @@ A general Component has no implicit children prop. If desired, you can specify o
 > npm install bootstrap-icons
 ```
 
+```bash
+# install toast
+> npm install solid-toast
+```
+
 ## to refresh the site
 edit <code>src/App.tsx</code> and save to reload.
 
