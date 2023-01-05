@@ -20,6 +20,7 @@
     "@solidjs/router": "^0.5.1",
     "bootstrap": "^5.2.3",
     "solid-js": "^1.5.1",
+    "solid-toast": "^0.4.0",
     "uuid": "^9.0.0"
   }
 }
