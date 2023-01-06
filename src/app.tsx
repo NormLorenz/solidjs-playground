@@ -1,10 +1,11 @@
 import { useRoutes } from '@solidjs/router';
-import { Component, createEffect, onMount } from 'solid-js';
+import { Component, onMount } from 'solid-js';
 
 import { routes } from './routes';
 import Store from './store';
 import Footer from './fragments/Footer';
 import Menu from './fragments/Menu';
+import Toast from './fragments/Toast';
 
 const Routes = useRoutes(routes);
 const { localStorage } = window;
@@ -33,6 +34,7 @@ const App: Component = () => {
 
   return (
     <div class="container bg-light">
+      
       <div class="row pt-2">
         <div>
           <Menu />
@@ -49,6 +51,10 @@ const App: Component = () => {
         <div class="col d-flex justify-content-center border fixed-bottom">
           <Footer />
         </div>
+      </div>
+
+      <div>
+        <Toast />
       </div>
 
     </div>
