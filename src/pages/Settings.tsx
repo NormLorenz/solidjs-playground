@@ -1,16 +1,7 @@
 import { createEffect } from 'solid-js';
-import toast, { Toaster } from 'solid-toast';
+import toast from 'solid-toast';
 
-const notify = () => toast.success('Updated local application storage.');
-
-// const App = () => {
-//   return (
-//     <div>
-//       <button onClick={notify}>Make me a toast</button>
-//       <Toaster />
-//     </div>
-//   );
-// };
+const notify = () => toast.success('Updated global storage.');
 
 import Store from '../store';
 
@@ -20,9 +11,7 @@ const Settings = () => {
   const [store, setStore] = Store;
 
   const handleOnClick = () => {
-    const settings = { mode: store.mode, theme: store.theme };
-    localStorage.setItem('settings', JSON.stringify(settings));
-
+    notify();
   }
 
   // move to settings
@@ -32,7 +21,6 @@ const Settings = () => {
   });
 
   return (
-
     <div class="container">
 
       <div class="row pt-2">
@@ -85,23 +73,6 @@ const Settings = () => {
         <div class="row pt-2">
           <div class="col d-flex justify-content-center border">
             <button type="button" class="btn btn-outline-primary" onClick={() => handleOnClick()}>Save to Global Storage</button>
-            <button onClick={notify}>Make me a toast</button>
-            <Toaster
-              position="top-right"
-              // Spacing between each toast in pixels
-              gutter={8}
-              containerClassName=""
-              containerStyle={{}}
-              toastOptions={{
-                // Define default options that each toast will inherit. Will be overwritten by individual toast options
-                className: '',
-                duration: 5000,
-                style: {
-                  background: 'green',
-                  color: '#fff',
-                },
-              }}
-            />
           </div>
         </div>
 
