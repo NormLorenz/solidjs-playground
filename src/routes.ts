@@ -1,5 +1,5 @@
 import { RouteDefinition } from '@solidjs/router/dist/types';
-import { lazy } from 'solid-js';
+import { createResource, lazy } from 'solid-js';
 
 import Home from './pages/home';
 import AboutData from './services/about.service';
@@ -26,7 +26,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/bookshelf',
-    component: lazy(() => import('./pages/Bookshelf/Bookshelf')),
+    component: lazy(() => import('./pages/BookShelf/BookShelf')),
   },
   {
     path: '/tasks',

@@ -1,8 +1,28 @@
-const BookList = () => {
+import { For } from "solid-js";
 
-  return (
-    <h1>Book List</h1>
-  )
+import { Book } from "./BookShelf";
+
+interface BookListProps {
+  books: Book[];
 }
 
-export default BookList;
+export function BookList(props: BookListProps) {
+  const totalBooks = () => props.books.length;
+  return (
+    <>
+      <h2>My books ({totalBooks()})</h2>
+      <ul>
+        <For each={props.books}>
+          {(book) => {
+            return (
+              <li>
+                {book.title}
+                <span style={{ "font-style": "italic" }}> ({book.author})</span>
+              </li>
+            );
+          }}
+        </For>
+      </ul>
+    </>
+  );
+}

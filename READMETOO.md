@@ -61,6 +61,7 @@
 - should I be using Component type on all classes?
 - new page for github
 - refactor local storage to theme, mode, tasks
+- understand functions with props
 
 A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.
 
