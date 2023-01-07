@@ -48,7 +48,7 @@ const App: Component = () => {
       </div>
 
       <div class="row pt-2">
-        <div class="col d-flex justify-content-center border fixed-bottom">
+        <div class="col d-flex justify-content-center border">
           <Footer />
         </div>
       </div>

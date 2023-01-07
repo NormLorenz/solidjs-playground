@@ -62,6 +62,9 @@
 - new page for github
 - refactor local storage to theme, mode, tasks
 - understand functions with props
+- how to pass props from the router
+- fix spelling of App.tsx
+- still having trouble with bootstrap
 
 A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.
 

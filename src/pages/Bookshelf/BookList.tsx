@@ -7,7 +7,9 @@ interface BookListProps {
 }
 
 export function BookList(props: BookListProps) {
+
   const totalBooks = () => props.books.length;
+
   return (
     <>
       <h2>My books ({totalBooks()})</h2>
@@ -16,8 +18,7 @@ export function BookList(props: BookListProps) {
           {(book) => {
             return (
               <li>
-                {book.title}
-                <span style={{ "font-style": "italic" }}> ({book.author})</span>
+                {book.title} <span style={{ "font-style": "italic" }}> ({book.author})</span>
               </li>
             );
           }}
