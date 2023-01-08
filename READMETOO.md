@@ -4,12 +4,10 @@
 - ~~refactor router~~
 - ~~local storage~~
 - ~~global storage~~
-- ~~intall bootstrap - solid-bootstarp~~
 - ~~move the solidjs graphic to the home page~~
 - ~~why is the app.tsx style sheet called app.module.css~~
 - ~~use data as part of the route~~
 - ~~spinner~~
-- ~~download bootstrap locally~~
 - ~~lazy loading~~
   - ~~theme dark/light~~
   - ~~mode expert/novice~~
@@ -64,7 +62,7 @@
 - understand functions with props
 - how to pass props from the router
 - fix spelling of App.tsx
-- still having trouble with bootstrap
+- build a contact form with email
 
 A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.
 
@@ -76,12 +74,6 @@ A general Component has no implicit children prop. If desired, you can specify o
 ```bash
 # install the router
 > npm install @solidjs/router
-```
-
-```bash
-# install bootstrap
-> npm install bootstrap
-> npm install bootstrap-icons
 ```
 
 ```bash

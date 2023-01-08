@@ -13,11 +13,11 @@ export function BookList(props: BookListProps) {
   return (
     <>
       <h2>My books ({totalBooks()})</h2>
-      <ul>
+      <ul class="list-group">
         <For each={props.books}>
           {(book) => {
             return (
-              <li>
+              <li class="list-group-item">
                 {book.title} <span style={{ "font-style": "italic" }}> ({book.author})</span>
               </li>
             );

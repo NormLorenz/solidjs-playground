@@ -14,7 +14,7 @@ export type Book = {
 const initialBooks: Book[] = [
   { title: "Code Complete", author: "Steve McConnell" },
   { title: "The Hobbit", author: "J.R.R. Tolkien" },
-  { title: "Living a Feminist Life", author: "Sarah Ahmed" },
+  { title: "Tarzan and the lost empire", author: "Edgar Rice Burroughs" },
 ];
 
 const BookShelf = () => {
@@ -25,17 +25,36 @@ const BookShelf = () => {
   const toggleForm = () => setShowForm(!showForm());
 
   return (
-    <div>
-      <h1>Solid's Bookshelf</h1>
+    <div class="container">
 
-      <BookList books={books()} />
+      <div class="row">
+        <div class="col d-flex justify-content-center border">
+          <h1>Solid's Bookshelf</h1>
+        </div>
+      </div>
 
-      <Show when={showForm()} fallback={<button class="btn btn-outline-primary" type="button" onClick={toggleForm}>Add a book</button>}>
+      <div class="row">
+        <div class="col-2 border"></div>
+        <div class="col-8 border">
 
-        <AddBook setBooks={setBooks} />
-        <button class="btn btn-outline-primary" type="button" onClick={toggleForm}>Finished adding books</button>
+          <BookList books={books()} />
 
-      </Show>
+          <div class="container">
+            <div class="row">
+              <div class="col-1 border"></div>
+              <div class="col-10 border">
+                <Show when={showForm()} fallback={<button class="btn btn-outline-primary" type="button" onClick={toggleForm}>Add a book</button>}>
+                  <AddBook setBooks={setBooks} />
+                  <button class="btn btn-outline-primary" type="button" onClick={toggleForm}>Finished adding books</button>
+                </Show>
+              </div>
+              <div class="col-1 border"></div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-2 border"></div>
+      </div>
 
     </div >
   );
