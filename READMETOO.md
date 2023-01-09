@@ -36,6 +36,7 @@
 - how to pass props from the router
 - fix spelling of App.tsx
 - build a contact form with email
+- refactor user page(s)
 
 A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.
 
