@@ -12,7 +12,7 @@ export function BookList(props: BookListProps) {
 
   return (
     <>
-      <h2>My books ({totalBooks()})</h2>
+      <h3>My books ({totalBooks()})</h3>
       <ul class="list-group">
         <For each={props.books}>
           {(book) => {

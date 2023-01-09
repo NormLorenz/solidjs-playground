@@ -1,35 +1,11 @@
 # Using the tutorial located [here](https://www.youtube.com/watch?v=pFEZLQ6DOf0)
 
 ## tasks
-- ~~refactor router~~
-- ~~local storage~~
-- ~~global storage~~
-- ~~move the solidjs graphic to the home page~~
-- ~~why is the app.tsx style sheet called app.module.css~~
-- ~~use data as part of the route~~
-- ~~spinner~~
-- ~~lazy loading~~
-  - ~~theme dark/light~~
-  - ~~mode expert/novice~~
-- ~~move home page logo to assets~~
-  - ~~on settings page, enable or disable buttons based upon the store~~
-- ~~get rid of the users page and replace it with the about page~~
-- ~~build a footer fragment~~
-  - ~~also relocate the createEffect listeners~~
-- ~~build a navigation fragment~~
-- ~~position footer at the bottom on the page~~
-- ~~move create effect to settings.tsx~~
-- ~~Remove index.css file~~
-- ~~Remove app.css file~~
-- ~~Move and rename app.module.css file to Home.module.css~~
-- ~~build out the settings page~~
-- toaster - add to settings page
 - refactor differences between components and functions
 - config.json file
 - shopping cart
 - MSAL
 - integrate a sass complier
-- implement a service that pulls a remote user data and/or avatar
 - linter
 - pass/emit props by a component
 - dark/light themes
@@ -45,17 +21,14 @@
   - menu drop down not working
 - tasks list using global storage
 - counter using signal
-- server
 - footer needs work
 - build a utility class for creating updating local storage
 - build a utility class for creating updating global storage
-- style the site
-- Tasks page
+- tasks page
   - clear input box after use - check tutorial by ebinezer
   - refresh issue after adding new task
   - fix site refresh issue when losing tasks
 - nav-link active attribute
-- solidjs vscode extension
 - should I be using Component type on all classes?
 - new page for github
 - refactor local storage to theme, mode, tasks

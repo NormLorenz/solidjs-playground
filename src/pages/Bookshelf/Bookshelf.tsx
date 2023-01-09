@@ -28,32 +28,39 @@ const BookShelf = () => {
     <div class="container">
 
       <div class="row">
-        <div class="col d-flex justify-content-center border">
+        <div class="col d-flex justify-content-center">
           <h1>Solid's Bookshelf</h1>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-2 border"></div>
-        <div class="col-8 border">
+        <div class="col-2"></div>
+        <div class="col-8">
 
           <BookList books={books()} />
 
           <div class="container">
             <div class="row">
-              <div class="col-1 border"></div>
-              <div class="col-10 border">
-                <Show when={showForm()} fallback={<button class="btn btn-outline-primary" type="button" onClick={toggleForm}>Add a book</button>}>
+              <div class="col-1"></div>
+              <div class="col-10">
+
+                <Show when={showForm()} fallback={
+                  <div class="p-3">
+                    <button class="btn btn-outline-primary" type="button" onClick={toggleForm}>Add a book</button>
+                  </div>
+                }>
                   <AddBook setBooks={setBooks} />
-                  <button class="btn btn-outline-primary" type="button" onClick={toggleForm}>Finished adding books</button>
+                  <div class="p-3">
+                    <button class="btn btn-outline-primary " type="button" onClick={toggleForm}>Finished adding books</button>
+                  </div>
                 </Show>
               </div>
-              <div class="col-1 border"></div>
+              <div class="col-1"></div>
             </div>
           </div>
 
         </div>
-        <div class="col-2 border"></div>
+        <div class="col-2"></div>
       </div>
 
     </div >
