@@ -10,6 +10,7 @@ const User = () => {
   const [user] = createResource(userId, fetchUser);
 
   // somehow this works on the AddBook.tsx page
+  // also checkout how we fetch books from fetchBooks.ts
 
   return (
     <div class="container">
