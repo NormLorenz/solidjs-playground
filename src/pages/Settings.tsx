@@ -23,13 +23,13 @@ const Settings = () => {
   return (
     <div class="container">
 
-      <div class="row pt-2">
+      <div class="row p-3">
         <div class="col d-flex justify-content-center">
           <h1>Settings Page</h1>
         </div>
       </div>
 
-      <div class="row pt-2">
+      <div class="row p-3">
         <div class="col d-flex justify-content-center">
           <form>
             <div class="form-check">
@@ -50,7 +50,7 @@ const Settings = () => {
         </div>
       </div>
 
-      <div class="row pt-2">
+      <div class="row p-3">
         <div class="col d-flex justify-content-center">
           <form>
             <div class="form-check">
@@ -70,7 +70,7 @@ const Settings = () => {
           </form>
         </div>
 
-        <div class="row pt-2">
+        <div class="row p-3">
           <div class="col d-flex justify-content-center">
             <button type="button" class="btn btn-outline-primary" onClick={() => handleOnClick()}>Save to Global Storage</button>
           </div>
