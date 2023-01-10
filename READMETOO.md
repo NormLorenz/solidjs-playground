@@ -8,8 +8,6 @@
 - integrate a sass complier
 - linter
 - pass/emit props by a component
-- dark/light themes
-- bootstrap offcanvas
 - google chart
 - how to print a portion of the page
 - testing with jest
@@ -37,6 +35,11 @@
 - fix spelling of App.tsx
 - build a contact form with email
 - refactor user page(s)
+- css
+  - dark/light themes
+  - bootstrap offcanvas
+  - compare bootstrap, picocss, w3css and simplecss
+- movies page
 
 A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.
 
