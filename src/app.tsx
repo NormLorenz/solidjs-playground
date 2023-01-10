@@ -33,7 +33,7 @@ const App: Component = () => {
   });
 
   return (
-    <div class="container bg-light">
+    <div class="container">
       
       <div class="row pt-2">
         <div>
