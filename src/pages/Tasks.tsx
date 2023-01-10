@@ -55,13 +55,13 @@ const Tasks = () => {
     <div class="container">
 
       <div class="row pt-2">
-        <div class="col d-flex justify-content-center border">
+        <div class="col d-flex justify-content-center">
           <h1>Tasks Page</h1>
         </div>
       </div>
 
       <div class="row pt-2">
-        <div class="col d-flex justify-content-center border">
+        <div class="col d-flex justify-content-center">
           <form class="d-flex" role="search">
             <input class="form-control me-2" id="nameField" onChange={(e) => nameField = e.currentTarget.value} type="text"
               placeholder="A task name" aria-label="Name" required />
@@ -71,7 +71,7 @@ const Tasks = () => {
       </div>
 
       <div class="row pt-2">
-        <div class="col d-flex justify-content-center border">
+        <div class="col d-flex justify-content-center">
           <table class="table table-striped">
             <thead>
               <tr>
