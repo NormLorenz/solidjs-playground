@@ -5,19 +5,19 @@ const Home = () => {
   return (
     <div class="container">
 
-      <div class="row pt-2">
+      <div class="row p-3">
         <div class="col d-flex justify-content-center">
           <h1>Home Page</h1>
         </div>
       </div>
       
-      <div class="row pt-2">
+      <div class="row p-3">
         <div class="col d-flex justify-content-center">
           <img src={logo} class={styles.logo} alt="logo" />
         </div>
       </div>
 
-      <div class="row pt-2">
+      <div class="row p-3">
         <div class="col d-flex justify-content-center">
           <p>Solid's overall approach to reactivity is to wrap any reactive computation in a function,
             and rerun that function when its dependencies update. The Solid JSX compiler also wraps most
@@ -28,7 +28,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div class="row pt-2">
+      <div class="row p-3">
         <div class="col d-flex justify-content-center">
           <p>By default, the dependencies of a function get tracked automatically when they're called in a tracking
             scope, by detecting when the function reads reactive state (e.g., via a Signal getter or Store
