@@ -13,8 +13,6 @@ export async function searchBooks(query: string) {
 
   const results = await response.json();
   const documents = results.docs as ResultItem[];
-  
-  console.log(documents);
 
   return documents.slice(0, 10).map(({ title, author_name }) => ({
     title,
