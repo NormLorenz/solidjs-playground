@@ -9,13 +9,13 @@ const About = () => {
     <div class="container">
 
       <div class="row pt-2">
-        <div class="col d-flex justify-content-center border">
+        <div class="col d-flex justify-content-center">
           <h1>About Page</h1>
         </div>
       </div>
 
       <div class="row pt-2">
-        <div class="col d-flex justify-content-center border">
+        <div class="col d-flex justify-content-center">
           <p>
             <span>This website was created to explore the capibilities of Solidjs. We love</span>
             <Suspense fallback={
@@ -27,7 +27,7 @@ const About = () => {
       </div>
 
       <div class="row pt-2">
-        <div class="col d-flex justify-content-center border">
+        <div class="col d-flex justify-content-center">
           <div class="card" style="width: 18rem;">
             <img src="/src/assets/german-compounds.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
