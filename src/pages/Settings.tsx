@@ -24,13 +24,13 @@ const Settings = () => {
     <div class="container">
 
       <div class="row pt-2">
-        <div class="col d-flex justify-content-center border">
+        <div class="col d-flex justify-content-center">
           <h1>Settings Page</h1>
         </div>
       </div>
 
       <div class="row pt-2">
-        <div class="col d-flex justify-content-center border">
+        <div class="col d-flex justify-content-center">
           <form>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="themeRadioGroup" id="themeRadio1" checked={store.theme === 'light'}
@@ -51,7 +51,7 @@ const Settings = () => {
       </div>
 
       <div class="row pt-2">
-        <div class="col d-flex justify-content-center border">
+        <div class="col d-flex justify-content-center">
           <form>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="modeRadioGroup" id="modeRadio1" checked={store.mode === 'novice'}
@@ -71,7 +71,7 @@ const Settings = () => {
         </div>
 
         <div class="row pt-2">
-          <div class="col d-flex justify-content-center border">
+          <div class="col d-flex justify-content-center">
             <button type="button" class="btn btn-outline-primary" onClick={() => handleOnClick()}>Save to Global Storage</button>
           </div>
         </div>
