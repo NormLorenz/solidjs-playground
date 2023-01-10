@@ -9,8 +9,8 @@ export interface AddBookProps {
 
 export function AddBook(props: AddBookProps) {
 
-  const [input, setInput] = createSignal("");
-  const [query, setQuery] = createSignal("");
+  const [input, setInput] = createSignal('');
+  const [query, setQuery] = createSignal('');
 
   const [data] = createResource<Book[], string>(query, searchBooks);
 
