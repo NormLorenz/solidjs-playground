@@ -1,4 +1,4 @@
-import { createSignal, Setter, JSX, createResource, For, Show } from "solid-js";
+import { createSignal, Setter, createResource, For, Show } from "solid-js";
 
 import { Book } from "./BookShelf";
 import { searchBooks } from "./searchBooks";
@@ -7,7 +7,7 @@ export interface AddBookProps {
   setBooks: Setter<Book[]>;
 }
 
-export function AddBook(props: AddBookProps) {
+export const AddBook = (props: AddBookProps) => {
 
   const [input, setInput] = createSignal('');
   const [query, setQuery] = createSignal('');
