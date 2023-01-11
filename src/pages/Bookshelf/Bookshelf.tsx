@@ -5,23 +5,13 @@ import { createSignal, Show } from 'solid-js';
 
 import { BookList } from './BookList';
 import { AddBook } from './AddBook';
+import bookShelfState from './bookShelf.state';
 
-export type Book = {
-  title: string;
-  author: string;
-};
-
-const initialBooks: Book[] = [
-  { title: 'Code Complete', author: 'Steve McConnell' },
-  { title: 'The Hobbit', author: 'J.R.R. Tolkien' },
-  { title: 'Tarzan and the lost empire', author: 'Edgar Rice Burroughs' },
-];
+const { books, setBooks } = bookShelfState;
 
 const BookShelf = () => {
 
-  const [books, setBooks] = createSignal(initialBooks);
   const [showForm, setShowForm] = createSignal(false);
-
   const toggleForm = () => setShowForm(!showForm());
 
   return (
