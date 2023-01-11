@@ -6,7 +6,7 @@ interface BookListProps {
   books: Book[];
 }
 
-export function BookList(props: BookListProps) {
+export const BookList = (props: BookListProps) => {
 
   const totalBooks = () => props.books.length;
 
