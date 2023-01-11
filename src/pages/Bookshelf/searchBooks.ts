@@ -5,7 +5,7 @@ type ResultItem = {
 
 export async function searchBooks(query: string) {
 
-  if (query.trim() === "") return [];
+  if (query.trim() === '') return [];
 
   const response = await fetch(
     `https://openlibrary.org/search.json?q=${encodeURI(query)}`
@@ -13,10 +13,10 @@ export async function searchBooks(query: string) {
 
   const results = await response.json();
   const documents = results.docs as ResultItem[];
-
+  
   return documents.slice(0, 10).map(({ title, author_name }) => ({
     title,
-    author: author_name?.join(", "),
+    author: author_name?.join(', '),
   }));
 
 }
