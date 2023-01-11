@@ -1,7 +1,7 @@
 import { createSignal, Setter, createResource, For, Show } from "solid-js";
 
 import { Book } from "./BookShelf";
-import { searchBooks } from "./searchBooks";
+import { bookShelfService } from './bookShelf.service';
 
 export interface AddBookProps {
   setBooks: Setter<Book[]>;
@@ -12,7 +12,7 @@ export const AddBook = (props: AddBookProps) => {
   const [input, setInput] = createSignal('');
   const [query, setQuery] = createSignal('');
 
-  const [data] = createResource<Book[], string>(query, searchBooks);
+  const [data] = createResource<Book[], string>(query, bookShelfService);
 
   return (
     <div class="container">
