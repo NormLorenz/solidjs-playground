@@ -1,14 +1,18 @@
-import { createSignal, createMemo, createRoot } from "solid-js";
+import { createSignal, createRoot } from "solid-js";
+
+import { Book } from './bookShelf.model';
 
 const bookShelfState = () => {
 
-  // const [count, setCount] = createSignal(0);
+  const initialBooks: Book[] = [
+    { title: 'Code Complete', author: 'Steve McConnell' },
+    { title: 'The Hobbit', author: 'J.R.R. Tolkien' },
+    { title: 'Tarzan and the lost empire', author: 'Edgar Rice Burroughs' },
+  ];
 
-  // const increment = () => setCount(count() + 1);
-  // const clear = () => setCount(0);
-  // const doubleCount = createMemo(() => count() * 2);
+  const [books, setBooks] = createSignal(initialBooks);
+  return { books, setBooks };
 
-  // return { count, doubleCount, increment, clear };
 }
 
 export default createRoot(bookShelfState);
