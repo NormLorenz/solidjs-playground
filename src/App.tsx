@@ -9,7 +9,7 @@ import Toast from './fragments/Toast';
 
 const Routes = useRoutes(routes);
 const { localStorage } = window;
-const [store, setStore] = Store;
+// const [store, setStore] = Store;
 
 const App: Component = () => {
 
@@ -17,19 +17,19 @@ const App: Component = () => {
 
     console.log('onMount ', new Date());
 
-    // initialize local storage if necessary
-    const settings = { mode: 'novice', theme: 'light' };
-    if (localStorage.getItem('settings') === null) {
-      localStorage.setItem('settings', JSON.stringify(settings));
-    }
+    // // initialize local storage if necessary
+    // const settings = { mode: 'novice', theme: 'light' };
+    // if (localStorage.getItem('settings') === null) {
+    //   localStorage.setItem('settings', JSON.stringify(settings));
+    // }
 
-    // save local storage to global storage
-    const settingsStringified = localStorage.getItem('settings');
-    if (settingsStringified !== null) {
-      const settings = JSON.parse(settingsStringified);
-      setStore({ mode: settings.mode });
-      setStore({ theme: settings.theme });
-    }
+    // // save local storage to global storage
+    // const settingsStringified = localStorage.getItem('settings');
+    // if (settingsStringified !== null) {
+    //   const settings = JSON.parse(settingsStringified);
+    //   setStore({ mode: settings.mode });
+    //   setStore({ theme: settings.theme });
+    // }
   });
 
   return (
