@@ -11,11 +11,11 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/user',
-    component: lazy(() => import('./pages/User')),
+    component: lazy(() => import('./pages/User/User')),
   },
   {
     path: '/settings',
-    component: lazy(() => import('./pages/Settings')),
+    component: lazy(() => import('./pages/Settings/Settings')),
   },
   {
     path: '/about',
@@ -28,7 +28,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/tasks',
-    component: lazy(() => import('./pages/Tasks')),
+    component: lazy(() => import('./pages/Tasks/Tasks')),
   },
   {
     path: ['login', 'sign-up'],

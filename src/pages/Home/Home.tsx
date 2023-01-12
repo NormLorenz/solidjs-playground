@@ -1,10 +1,10 @@
 import logo from '../../assets/logo.svg';
 import styles from './Home.module.css';
-import counter from "./counter"
+import homeState from "./home.state"
 
 const Home = () => {
 
-  const { count, doubleCount, increment, clear } = counter;
+  const { count, doubleCount, increment, clear } = homeState;
 
   return (
     <div class="container">

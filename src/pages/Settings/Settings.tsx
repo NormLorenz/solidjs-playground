@@ -3,7 +3,7 @@ import toast from 'solid-toast';
 
 const notify = () => toast.success('Updated global storage.');
 
-import Store from '../store';
+import Store from '../../store';
 
 const Settings = () => {
 

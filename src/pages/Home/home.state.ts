@@ -1,6 +1,6 @@
 import { createSignal, createMemo, createRoot } from "solid-js";
 
-const createCounter = () => {
+const homeState = () => {
 
   const [count, setCount] = createSignal(0);
 
@@ -11,4 +11,4 @@ const createCounter = () => {
   return { count, doubleCount, increment, clear };
 }
 
-export default createRoot(createCounter);
+export default createRoot(homeState);

@@ -3,7 +3,7 @@
 import { For } from "solid-js";
 import { v4 as uuidv4 } from 'uuid';
 
-import Store, { Task } from '../store';
+import Store, { Task } from '../../store';
 
 const Tasks = () => {
 
