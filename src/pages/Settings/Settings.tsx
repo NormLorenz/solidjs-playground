@@ -1,24 +1,24 @@
-import { createEffect } from 'solid-js';
 import toast from 'solid-toast';
 
-const notify = () => toast.success('Updated global storage.');
+import settingsState from './settings.state';
 
-import Store from '../../store';
+const { settings, setSettings } = settingsState;
+
+const notify = () => toast('Update Local Storage');
 
 const Settings = () => {
-
-  // destructure store
-  const [store, setStore] = Store;
 
   const handleOnClick = () => {
     notify();
   }
 
-  // move to settings
-  createEffect(() => {
-    const settings = { mode: store.mode, theme: store.theme };
-    localStorage.setItem('settings', JSON.stringify(settings));
-  });
+  const updateTheme = (theme: string) => {
+    setSettings({theme: theme, mode: settings().mode});
+  }
+  
+  const updateMode = (mode: string) => {
+    setSettings({theme: settings().theme, mode: mode});
+  }
 
   return (
     <div class="container">
@@ -33,15 +33,15 @@ const Settings = () => {
         <div class="col d-flex justify-content-center">
           <form>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="themeRadioGroup" id="themeRadio1" checked={store.theme === 'light'}
-                onClick={() => setStore({ theme: 'light' })} />
+              <input class="form-check-input" type="radio" name="themeRadioGroup" id="themeRadio1" checked={settings().theme === 'light'}
+                onClick={() => updateTheme("light")} />
               <label class="form-check-label" for="themeRadio1">
                 Light Theme
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="themeRadioGroup" id="themeRadio2" checked={store.theme === 'dark'}
-                onClick={() => setStore({ theme: 'dark' })} />
+              <input class="form-check-input" type="radio" name="themeRadioGroup" id="themeRadio2" checked={settings().theme === 'dark'}
+                onClick={() => updateTheme("dark")} />
               <label class="form-check-label" for="themeRadio2">
                 Dark Theme
               </label>
@@ -54,15 +54,15 @@ const Settings = () => {
         <div class="col d-flex justify-content-center">
           <form>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="modeRadioGroup" id="modeRadio1" checked={store.mode === 'novice'}
-                onClick={() => setStore({ mode: 'novice' })} />
+              <input class="form-check-input" type="radio" name="modeRadioGroup" id="modeRadio1" checked={settings().mode === 'novice'}
+                onClick={() => updateMode('novice')} />
               <label class="form-check-label" for="modeRadio1">
                 Novice Mode
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="modeRadioGroup" id="modeRadio2" checked={store.mode === 'expert'}
-                onClick={() => setStore({ mode: 'expert' })} />
+              <input class="form-check-input" type="radio" name="modeRadioGroup" id="modeRadio2" checked={settings().mode === 'expert'}
+                onClick={() => updateMode('expert')} />
               <label class="form-check-label" for="modeRadio2">
                 Expert Mode
               </label>
@@ -72,7 +72,7 @@ const Settings = () => {
 
         <div class="row p-3">
           <div class="col d-flex justify-content-center">
-            <button type="button" class="btn btn-outline-primary" onClick={() => handleOnClick()}>Save to Global Storage</button>
+            <button type="button" class="btn btn-outline-primary" onClick={() => handleOnClick()}>Display a Toaster</button>
           </div>
         </div>
 
