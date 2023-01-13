@@ -1,16 +1,12 @@
 import { createSignal, createResource, Show } from "solid-js";
 
-const fetchUser = async (id: string) =>
-  (await fetch(`https://swapi.dev/api/people/${id}/`)).json();
+import { userService } from './user.service';
 
 const User = () => {
 
   const [input, setInput] = createSignal('');
   const [userId, setUserId] = createSignal('');
-  const [user] = createResource(userId, fetchUser);
-
-  // somehow this works on the AddBook.tsx page
-  // also checkout how we fetch books from fetchBooks.ts
+  const [user] = createResource<string, string>(userId, userService);
 
   return (
     <div class="container">
@@ -34,7 +30,7 @@ const User = () => {
           </div>
           <div class="col-lg-1">
             <div class="form-group mt-2">
-              <button class="btn btn-outline-primary" type="submit" onClick={(e) => { e.preventDefault(); setUserId(input()); }}>Search</button>
+              <button class="btn btn-outline-primary" type="submit" onClick={(e) => { e.preventDefault(); setUserId(input()); setInput('') }}>Search</button>
             </div>
           </div>
           <div class="col-lg-3"></div>
