@@ -28,9 +28,6 @@
   - dark/light themes
   - bootstrap offcanvas
 - footer fragment needs work
-- user's page needs work
-
-A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.
 
 ```bash
 # to launch the app
