@@ -4,7 +4,7 @@ import settingsState from './settings.state';
 
 const { settings, setSettings } = settingsState;
 
-const notify = () => toast('Update Local Storage');
+const notify = () => toast('Update global state and local storage');
 
 const Settings = () => {
 
