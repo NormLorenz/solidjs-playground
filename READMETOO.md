@@ -2,8 +2,8 @@
 
 ## tasks
 - refactor differences between components and functions
-- how do we use a config.json file
-- MSAL
+- how do we use a config.json like file
+- integrate MSAL
 - integrate a sass complier
 - using a linter
 - pass/emit props by a component
@@ -17,17 +17,18 @@
 - understand functions with props
 - how to pass props from the router
 - new pages
-  - shopping cart
-  - google chart
-  - movies
-  - build a contact form with email
-  - firebase/firestore real time update
-  - git hub
+  - build a shopping cart
+  - build a google chart
+  - build a movies page
+  - build a registration form with email
+  - build a firebase/firestore real time update page
+  - build a github page
+  - build a markdown page
 - css
   - dark/light themes
   - bootstrap offcanvas
-  - compare bootstrap, picocss, w3css and simplecss
-- footer needs work
+- footer fragment needs work
+- user's page needs work
 
 A general Component has no implicit children prop. If desired, you can specify one as in Component<{name: String, children: JSX.Element}>.
 
@@ -51,5 +52,3 @@ A general Component has no implicit children prop. If desired, you can specify o
 edit <code>src/App.tsx</code> and save to reload.
 
 #8:40 minutes into the lecture
-
-########  ON MOUNT SEEMS TO BE RUNNING TWICE
