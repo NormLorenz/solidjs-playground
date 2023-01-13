@@ -8,13 +8,13 @@ const About = () => {
   return (
     <div class="container">
 
-      <div class="row pt-2">
+      <div class="row p-3">
         <div class="col d-flex justify-content-center">
           <h1>About Page</h1>
         </div>
       </div>
 
-      <div class="row pt-2">
+      <div class="row p-3">
         <div class="col d-flex justify-content-center">
           <p>
             <span>This website was created to explore the capibilities of Solidjs. We love</span>
@@ -26,13 +26,15 @@ const About = () => {
         </div>
       </div>
 
-      <div class="row pt-2">
+      <div class="row p-3">
         <div class="col d-flex justify-content-center">
-          <div class="card" style="width: 18rem;">
-            <img src="/src/assets/german-compounds.jpg" class="card-img-top" alt="..." />
+          <div class="card" style="width: 36rem;">
+            <span class="p-3">
+            <img src="/src/assets/solidjs-performance.png" class="card-img-top" alt="..." />
+            </span>
             <div class="card-body">
-              <h5 class="card-title">Compound Words</h5>
-              <p class="card-text">German Compound Words!</p>
+              <h5 class="card-title">Solidjs Performance</h5>
+              <p class="card-text">Almost as fast as vanilla Javascript!</p>
               <a href="#" class="btn btn-outline-primary">Go to home</a>
             </div>
           </div>
