@@ -14,9 +14,6 @@ const Menu = () => {
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#login">Login</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#/settings">Settings</a>
             </li>
             <li class="nav-item">
@@ -39,10 +36,10 @@ const Menu = () => {
                 More Links
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#/bookshelf">Bookshelf</a></li>
+                <li><a class="dropdown-item" href="#/tasks">Tasks</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="#/contactus">Contact Us</a></li>
               </ul>
             </li>
             <li class="nav-item">

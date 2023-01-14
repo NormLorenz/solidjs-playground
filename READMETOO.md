@@ -16,7 +16,7 @@
 - should I be using Component type on all classes?
 - understand functions with props
 - how to pass props from the router
-- new pages
+- pages
   - build a shopping cart
   - build a google chart
   - build a movies page
@@ -24,6 +24,7 @@
   - build a firebase/firestore real time update page
   - build a github page
   - build a markdown page
+  = remove auth page
 - css
   - dark/light themes
   - bootstrap offcanvas

@@ -31,9 +31,13 @@ export const routes: RouteDefinition[] = [
     component: lazy(() => import('./pages/Tasks/Tasks')),
   },
   {
-    path: ['login', 'sign-up'],
-    component: lazy(() => import('./pages/Auth')),
+    path: '/contactus',
+    component: lazy(() => import('./pages/ContactUs/ContactUs')),
   },
+  // {
+  //   path: ['login', 'sign-up'],
+  //   component: lazy(() => import('./pages/Auth')),
+  // },
   {
     path: '**',
     component: lazy(() => import('./pages/Error')),
