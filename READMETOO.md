@@ -11,11 +11,8 @@
 - testing with jest
 - menu
   - resized menu not working
-  - menu drop down not working
-- nav-link active attribute
 - should I be using Component type on all classes?
 - understand functions with props
-- how to pass props from the router
 - pages
   - build a shopping cart
   - build a google chart
@@ -24,7 +21,7 @@
   - build a firebase/firestore real time update page
   - build a github page
   - build a markdown page
-  = remove auth page
+  - fix user page
 - css
   - dark/light themes
   - bootstrap offcanvas

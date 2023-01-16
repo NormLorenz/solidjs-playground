@@ -6,7 +6,7 @@ import AboutData from './services/about.service';
 
 export const routes: RouteDefinition[] = [
   {
-    path: ['/'],
+    path: ['/', '/home'],
     component: Home,
   },
   {

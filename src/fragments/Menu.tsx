@@ -1,3 +1,5 @@
+import { A } from "@solidjs/router";
+
 const Menu = () => {
 
   return (
@@ -11,39 +13,39 @@ const Menu = () => {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <A class="nav-link" href="/home">Home</A>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#/settings">Settings</a>
+              <A class="nav-link" href="/settings">Settings</A>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#/bookshelf">Bookshelf</a>
+              <A class="nav-link" href="/bookshelf">Bookshelf</A>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#/404">404 Error</a>
+              <A class="nav-link" href="/404">404</A>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#/user">User</a>
+              <A class="nav-link" href="/user">User</A>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#/tasks">Tasks</a>
+              <A class="nav-link" href="/tasks">Tasks</A>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <A class="nav-link disabled" href="/disabled">Disabled</A>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 More Links
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#/bookshelf">Bookshelf</a></li>
-                <li><a class="dropdown-item" href="#/tasks">Tasks</a></li>
+                <A class="nav-link" href="/bookshelf">Bookshelf</A>
+                <A class="nav-link" href="/tasks">Tasks</A>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#/contactus">Contact Us</a></li>
+                <A class="nav-link" href="/contactus">Contact Us</A>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#/about">About</a>
+              <A class="nav-link" href="/about">About</A>
             </li>
           </ul>
           <form class="d-flex" role="search">
