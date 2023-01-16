@@ -1,4 +1,4 @@
-import { createSignal, createResource, Show } from "solid-js";
+import { createSignal, createResource, Show, createMemo } from "solid-js";
 
 import { userService } from './user.service';
 
@@ -7,6 +7,8 @@ const User = () => {
   const [input, setInput] = createSignal('');
   const [userId, setUserId] = createSignal('');
   const [user] = createResource<string, string>(userId, userService);
+  
+  const result = createMemo(() => { return userId() !== '' ? JSON.stringify(user(), null, 2) : ''; })
 
   return (
     <div class="container">
@@ -41,7 +43,7 @@ const User = () => {
           <div class="col-lg-6">
             <label for="outputFormControl" class="form-label">Result:&nbsp;</label>
             <Show when={!user.loading} fallback={<div class="spinner-border spinner-border-sm" role="status"></div>}> </Show>
-            <textarea class="form-control" value={JSON.stringify(user(), null, 2)} id="outputFormControl" rows="18"></textarea>
+            <textarea class="form-control" value={result()} id="outputFormControl" rows="18"></textarea>
           </div>
           <div class="col-lg-3"></div>
         </div>

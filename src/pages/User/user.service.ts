@@ -1,6 +1,6 @@
 export const userService = async (id: string) => {
 
-  if (id.trim() === '') return { error: 'no user id supplied' };
+  if (id.trim() === '') return {};
 
   const response = await fetch(
     `https://swapi.dev/api/people/${id}/`
