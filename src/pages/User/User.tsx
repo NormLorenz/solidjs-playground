@@ -7,8 +7,8 @@ const User = () => {
   const [input, setInput] = createSignal('');
   const [userId, setUserId] = createSignal('');
   const [user] = createResource<string, string>(userId, userService);
-  
-  const result = createMemo(() => { return userId() !== '' ? JSON.stringify(user(), null, 2) : ''; })
+
+  const result = createMemo(() => { return user() !== null ? JSON.stringify(user(), null, 2) : ''; })
 
   return (
     <div class="container">
