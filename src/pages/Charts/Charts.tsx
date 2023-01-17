@@ -1,11 +1,9 @@
-
 const Charts = () => {
 
-  // {/*Div that will hold the pie chart*/}
+  // https://www.solidjs.com/tutorial/bindings_refs
 
-  // https://developers.google.com/chart/interactive/docs/basic_load_libs
-  // https://stackoverflow.com/questions/63604420/cannot-find-name-google-angular-8
-  // https://stackoverflow.com/questions/44170660/does-google-charts-have-typescript-definition-files
+  // create an element to display the chart
+  const chart = <div style="width:700px; height:400px;">My Element</div>;
 
   // Load the Visualization API and the corechart package.
   google.charts.load('current', { 'packages': ['corechart'] });
@@ -13,38 +11,48 @@ const Charts = () => {
   // Set a callback to run when the Google Visualization API is loaded.
   google.charts.setOnLoadCallback(drawChart);
 
-  // Callback that creates and populates a data table, instantiates the pie chart, passes 
-  // in the data and draws it.
+  // Callback that creates and populates a data table, instantiates the line chart, passes in the data and draws it.
   function drawChart() {
-
-    // Create the data table.
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Topping');
-    data.addColumn('number', 'Slices');
-    data.addRows([
-      ['Mushrooms', 5],
-      ['Onions', 1],
-      ['Olives', 1],
-      ['Zucchini', 1],
-      ['Pepperoni', 2]
+    
+    // Set Data
+    const data = google.visualization.arrayToDataTable([
+      ['Price', 'Size'],
+      [50, 7], [60, 8], [70, 8], [80, 9], [90, 9], [100, 9],
+      [110, 10], [120, 11], [130, 14], [140, 14], [150, 15]
     ]);
 
-    // Set chart options
-    var options = {
-      'title': 'How Much Pizza I Ate Last Night',
-      'width': 400,
-      'height': 300
+    // Set Options
+    const options = {
+      title: 'House Prices vs Size',
+      hAxis: { title: 'Square Meters' },
+      vAxis: { title: 'Price in Millions' },
+      backgroundColor: 'gray',
+      titleColor: 'lightgray'
     };
 
     // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
+    const _chart = new google.visualization.LineChart(chart as Element);
+
+    // Draw Chart
+    _chart.draw(data, options);
   }
 
-
   return (
-    // div that will hold the pie chart
-    <div id="chart_div">Charts</div>
+    <div class="container">
+
+      <div class="row p-3">
+        <div class="col d-flex justify-content-center">
+          <h1>Charts Page</h1>
+        </div>
+      </div>
+
+      <div class="row p-3">
+        <div class="col d-flex justify-content-center">
+          {chart}
+        </div>
+      </div>
+
+    </div>
   )
 }
 
