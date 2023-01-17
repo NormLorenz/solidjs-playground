@@ -40,6 +40,7 @@ const Menu = () => {
               <ul class="dropdown-menu">
                 <A class="nav-link" href="/bookshelf">Bookshelf</A>
                 <A class="nav-link" href="/tasks">Tasks</A>
+                <A class="nav-link" href="/charts">Charts</A>
                 <li><hr class="dropdown-divider" /></li>
                 <A class="nav-link" href="/contactus">Contact Us</A>
               </ul>

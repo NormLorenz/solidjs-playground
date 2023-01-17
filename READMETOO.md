@@ -12,7 +12,13 @@
 - understand functions with props
 - pages
   - build a shopping cart
-  - build a google chart
+  - build an imbedded google chart 
+    - https://developers.google.com/chart
+    - https://developers.google.com/chart/interactive/docs/quick_start
+    - https://www.w3schools.com/js/js_graphics_google_chart.asp
+    - https://www.npmjs.com/package/google-charts
+    - https://groups.google.com/g/google-visualization-api/search?q=react
+    - https://groups.google.com/g/google-visualization-api/c/64GnDH78xTs/m/5BdwC1q7BgAJ
   - build a movies page
   - finished a registration form with email
   - build a firebase/firestore real time update page
