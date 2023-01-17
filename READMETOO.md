@@ -13,12 +13,9 @@
 - pages
   - build a shopping cart
   - build an imbedded google chart 
-    - https://developers.google.com/chart
     - https://developers.google.com/chart/interactive/docs/quick_start
     - https://www.w3schools.com/js/js_graphics_google_chart.asp
     - https://www.npmjs.com/package/google-charts
-    - https://groups.google.com/g/google-visualization-api/search?q=react
-    - https://groups.google.com/g/google-visualization-api/c/64GnDH78xTs/m/5BdwC1q7BgAJ
   - build a movies page
   - finished a registration form with email
   - build a firebase/firestore real time update page
@@ -26,6 +23,7 @@
   - build a markdown page
 - css
   - dark/light themes
+    - https://github.com/solidjs/solid-meta
   - bootstrap offcanvas
 - footer fragment needs work
 
@@ -40,9 +38,10 @@
 ```
 
 ```bash
-# install toast / uuid
+# install toast / uuid / google charts types
 > npm install solid-toast
 > npm install uuid
+> npm install @types/google-charts --save-dev
 ```
 
 ## to refresh the site
