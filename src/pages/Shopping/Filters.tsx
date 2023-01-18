@@ -65,6 +65,7 @@ export default function Filters() {
     );
     return false;
   }
+
   return (
     <For each={filters()}>
       {(filter) => {
