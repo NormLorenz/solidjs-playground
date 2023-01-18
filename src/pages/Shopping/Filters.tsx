@@ -16,11 +16,12 @@ export default function Filters() {
   let filterList: Filter[] = [];
   const [filters, setFilters] = createSignal(filterList);
 
+  // create a list of product filters
   onMount(() => {
     ALLPRODUCTS.forEach((product) => {
       product.category.forEach((cat) => {
-        let found = filterList.some(function (el) {
-          return el.name === cat;
+        let found = filterList.some((filter) => {
+          return filter.name === cat;
         });
         if (!found) {
           filterList.push({ name: cat, checked: false });
@@ -30,20 +31,20 @@ export default function Filters() {
     setFilters(filterList);
   })
 
+  // create a list of products based upon the filters set
   createEffect(() => {
-    // make a flat array so we don't have to loop for every product and use .includes instead.
     setLoading(true);
-    let filterArr: Product[] = [];
+    let filterArr: Filter[] = [];
     filters().forEach((item) => {
       if (item.checked) {
-        filterArr.push(item.name);
+        filterArr.push(item);
       }
     })
 
     if (filterArr.length === 0) {
       setProducts(ALLPRODUCTS);
     } else {
-      let filteredProducts = ALLPRODUCTS.filter((item) => {
+      let filteredProducts: Product[] = ALLPRODUCTS.filter((item) => {
         let found = item.category.some((cat) => {
           return filterArr.includes(cat);
         });
