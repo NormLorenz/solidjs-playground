@@ -3,7 +3,7 @@ const Charts = () => {
   // https://www.solidjs.com/tutorial/bindings_refs
 
   // create an element to display the chart
-  const chart = <div style="width:700px; height:400px;">My Element</div>;
+  const chart = <div style="width:700px; height:400px;"></div>;
 
   // Load the Visualization API and the corechart package.
   google.charts.load('current', { 'packages': ['corechart'] });
