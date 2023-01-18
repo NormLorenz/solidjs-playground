@@ -19,7 +19,7 @@ const Menu = () => {
               <A class="nav-link" href="/settings">Settings</A>
             </li>
             <li class="nav-item">
-              <A class="nav-link" href="/bookshelf">Bookshelf</A>
+              <A class="nav-link" href="/shopping">Shopping</A>
             </li>
             <li class="nav-item">
               <A class="nav-link" href="/404">404</A>
