@@ -1,10 +1,24 @@
+import { createSignal } from "solid-js";
+import { createStore } from "solid-js/store";
+
+import { productList } from "./productList";
+import Products from "./Products";
+
+export const [loading, setLoading] = createSignal(false);
+export const [showCart, setShowCart] = createSignal(false);
+export const [toastMessage, setToastMessage] = createSignal(false);
+export const [cartItems, setCartItems] = createStore([]);
+export const [products, setProducts] = createStore(productList);
+
 const Shopping = () => {
 
   // https://michaelsoriano.com/lets-build-a-shopping-cart-website-with-solidjs-and-bootstrap-part-1/
   // https://michaelsoriano.com/lets-build-a-shopping-cart-website-with-solidjs-and-bootstrap-part-2/
   // https://github.com/michaelsoriano/solidjs-shoppingcart
   // https://solidjs-shoppingcart.vercel.app/
-  
+  // https://www.solidjs.com/tutorial/bindings_directives?solved
+  // https://www.youtube.com/watch?v=HSoRtowmOEY
+
   return (
     <div class="container">
 
@@ -16,13 +30,7 @@ const Shopping = () => {
 
       <div class="row p-3">
         <div class="col d-flex justify-content-center">
-          The page you requested doesn't exist.
-        </div>
-      </div>
-
-      <div class="row p-3">
-        <div class="col d-flex justify-content-center">
-          <a href="#" class="btn btn-outline-primary">Go to home</a>
+          <Products />
         </div>
       </div>
 
