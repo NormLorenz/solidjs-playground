@@ -21,6 +21,7 @@
   - build a firebase/firestore real time update page
   - build a github page
   - build a markdown page
+  - build a modal popup
 - css
   - dark/light themes
     - https://github.com/solidjs/solid-meta
