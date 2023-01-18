@@ -55,7 +55,8 @@ export const productList: Product[] = [
     slug: 'fuzzy-jacket',
     category: ['Casual'],
     sizes: ['Small', 'Medium', 'Large']
-  }, {
+  },
+  {
     id: '6b0f2089-b3f7-4c18-9b88-5f2e6f23c8bb',
     description: 'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis',
     name: 'Shiny Jacket',
