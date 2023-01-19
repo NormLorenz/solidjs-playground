@@ -11,7 +11,7 @@ const Routes = useRoutes(routes);
 const App: Component = () => {
 
   onMount(() => {
-    console.log('onMount ', new Date());
+    console.log('App onMount ', new Date());
   });
 
   return (
