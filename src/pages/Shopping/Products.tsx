@@ -11,6 +11,13 @@ function ProductTile(props: { product: Product; }) {
   const { product } = props;
 
   // const navigate = useNavigate();
+  
+//   .lt-clamp-3 {
+//         display: -webkit-box;
+//         -webkit-line-clamp: 3;
+//         -webkit-box-orient: vertical;  
+//         overflow: hidden;
+//   }
 
   return (
     <div class="col-lg-3">
