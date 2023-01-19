@@ -13,11 +13,11 @@ export default function Filters() {
 
   // make copy so the list doesn't mutate
   const ALLPRODUCTS = productList.slice();
-  let filterList: Filter[] = [];
-  const [filters, setFilters] = createSignal(filterList);
+  const [filters, setFilters] = createSignal([] as Filter[]);
 
   // create a list of product filters
   onMount(() => {
+    let filterList: Filter[] = [];
     ALLPRODUCTS.forEach((product) => {
       product.category.forEach((cat) => {
         let found = filterList.some((filter) => {
@@ -28,71 +28,63 @@ export default function Filters() {
         }
       })
     })
-    console.log(111, filterList);
-    console.log(222, new Date());
     setFilters(filterList);
   })
 
-  // create a list of products based upon the filters set
+  // create a list of products based upon the filters that are set
   createEffect(() => {
     setLoading(true);
-    let filterArr: Filter[] = [];
-    filters().forEach((item) => {
+
+    let categoryList: string[] = [];
+    filters().forEach((item: Filter) => {
       if (item.checked) {
-        filterArr.push(item);
+        categoryList.push(item.name);
       }
     })
 
-    if (filterArr.length === 0) {
+    if (categoryList.length === 0) {
       setProducts(ALLPRODUCTS);
+    } else {
+      let filteredProducts = ALLPRODUCTS.filter((product: Product) => {
+        let found = product.category.some((category) => {
+          return categoryList.includes(category);
+        });
+        if (found) {
+          return product;
+        }
+      })
+      setProducts(filteredProducts);
     }
-    //  else {
-    //   let filteredProducts: Product[] = ALLPRODUCTS.filter((item) => {
-    //     let found = item.category.some((cat) => {
-    //       return filterArr.includes(cat);
-    //     });
-    //     if (found) {
-    //       return item;
-    //     }
-    //   })
-    //   setProducts(filteredProducts);
-    // }
 
     setLoading(false);
   });
 
-  function filterChangeHandler(evt: { target: { value: string; checked: any; }; }) {
+  // update the checked value
+  function filterChangeHandler(e: MouseEvent & { currentTarget: HTMLInputElement; target: Element; }) {
     setFilters(
-      filters().map((item) => {
-        return item.name === evt.target.value ? { ...item, checked: evt.target.checked } : { ...item };
+      filters().map((item: Filter) => {
+        return item.name === e.currentTarget.value ? { ...item, checked: e.currentTarget.checked } : { ...item };
       })
     );
-    return false;
   }
 
   return (
-    <>
-      <h4>hi {JSON.stringify(filters())}</h4>
-      <h4>{new Date().toString()}</h4>
-    </>
-    // <For each={filters()}>
-    //   {(filter) => {
-    //     return (
-    //       // <div >
-    //       //   <input class="form-check-input"
-    //       //     type="checkbox"
-    //       //     value={filter.name}
-    //       //     id={filter.name}
-    //       //     checked={filter.checked}
-    //       //     // onChange={filterChangeHandler} 
-    //       //     />
-    //       //   <label class="form-check-label" for={filter.name}>
-    //       //     {filter.name}
-    //       //   </label>
-    //       // </div>
-    //       <span>{filter.name}</span>
-    //     )
-    //   }}
-    // </For>
+    <For each={filters()}>
+      {(filter) => {
+        return (
+          <div class="form-check">
+            <input class="form-check-input"
+              type="checkbox"
+              value={filter.name}
+              id={filter.name}
+              checked={filter.checked}
+              onClick={(e) => { e.preventDefault(); filterChangeHandler(e); }} />
+            <label class="form-check-label" for={filter.name}>
+              {filter.name}
+            </label>
+          </div>
+        )
+      }}
+    </For>
   )
 }
