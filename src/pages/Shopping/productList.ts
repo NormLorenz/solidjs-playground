@@ -3,7 +3,7 @@ import { Product } from "./product.model";
 export const productList: Product[] = [
   {
     id: '3e4374a5-0a54-4278-b611-feb69e9dbc21',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
     name: 'Black Jacket',
     price: 50,
     currency: 'USD',
@@ -14,7 +14,7 @@ export const productList: Product[] = [
   },
   {
     id: '6d22ea13-f41d-4b7c-8674-ae91876f47bf',
-    description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore',
+    description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.',
     name: 'Green Jacket',
     price: 70,
     currency: 'USD',
@@ -25,7 +25,7 @@ export const productList: Product[] = [
   },
   {
     id: '500ff4e3-e0e9-4c73-b135-daa45b4e250d',
-    description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint',
+    description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.',
     name: 'Striped Jacket',
     price: 45,
     currency: 'USD',
@@ -36,7 +36,7 @@ export const productList: Product[] = [
   },
   {
     id: '80d95a87-141d-4129-b736-ee9b58f8a2af',
-    description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint',
+    description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.',
     name: 'Blue Jacket',
     price: 65,
     currency: 'USD',
@@ -58,7 +58,7 @@ export const productList: Product[] = [
   },
   {
     id: '6b0f2089-b3f7-4c18-9b88-5f2e6f23c8bb',
-    description: 'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis',
+    description: 'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio.',
     name: 'Shiny Jacket',
     price: 35,
     currency: 'USD',

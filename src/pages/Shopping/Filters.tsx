@@ -28,6 +28,8 @@ export default function Filters() {
         }
       })
     })
+    console.log(111, filterList);
+    console.log(222, new Date());
     setFilters(filterList);
   })
 
@@ -43,17 +45,18 @@ export default function Filters() {
 
     if (filterArr.length === 0) {
       setProducts(ALLPRODUCTS);
-    } else {
-      let filteredProducts: Product[] = ALLPRODUCTS.filter((item) => {
-        let found = item.category.some((cat) => {
-          return filterArr.includes(cat);
-        });
-        if (found) {
-          return item;
-        }
-      })
-      setProducts(filteredProducts);
     }
+    //  else {
+    //   let filteredProducts: Product[] = ALLPRODUCTS.filter((item) => {
+    //     let found = item.category.some((cat) => {
+    //       return filterArr.includes(cat);
+    //     });
+    //     if (found) {
+    //       return item;
+    //     }
+    //   })
+    //   setProducts(filteredProducts);
+    // }
 
     setLoading(false);
   });
@@ -68,22 +71,28 @@ export default function Filters() {
   }
 
   return (
-    <For each={filters()}>
-      {(filter) => {
-        return (
-          <div class="form-check">
-            <input class="form-check-input"
-              type="checkbox"
-              value={filter.name}
-              id={filter.name}
-              checked={filter.checked}
-              onChange={filterChangeHandler} />
-            <label class="form-check-label" for={filter.name}>
-              {filter.name}
-            </label>
-          </div>
-        )
-      }}
-    </For>
+    <>
+      <h4>hi {JSON.stringify(filters())}</h4>
+      <h4>{new Date().toString()}</h4>
+    </>
+    // <For each={filters()}>
+    //   {(filter) => {
+    //     return (
+    //       // <div >
+    //       //   <input class="form-check-input"
+    //       //     type="checkbox"
+    //       //     value={filter.name}
+    //       //     id={filter.name}
+    //       //     checked={filter.checked}
+    //       //     // onChange={filterChangeHandler} 
+    //       //     />
+    //       //   <label class="form-check-label" for={filter.name}>
+    //       //     {filter.name}
+    //       //   </label>
+    //       // </div>
+    //       <span>{filter.name}</span>
+    //     )
+    //   }}
+    // </For>
   )
 }

@@ -1,5 +1,6 @@
 import { For } from 'solid-js';
-// import Filters from "../partials/Filters";
+import Filters from './Filters';
+
 // import { useNavigate } from "solid-app-router";
 // import { Card, Col, Row } from "solid-bootstrap";
 
@@ -48,7 +49,7 @@ export default function Products() {
     <div class="row mb-5 mt-5">
       <h3 class="mb-5">Products</h3>
       <div class="col lg-3">
-        {/* <Filters /> */}
+        <Filters />
       </div>
       <div class="col lg-9 d-flex flex-wrap gap-4">
         <For each={products}>
