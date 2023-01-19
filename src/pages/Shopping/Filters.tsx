@@ -17,6 +17,7 @@ export default function Filters() {
 
   // create a list of product filters
   onMount(() => {
+    console.log('Filters onMount ', new Date());
     let filterList: Filter[] = [];
     ALLPRODUCTS.forEach((product) => {
       product.category.forEach((cat) => {
