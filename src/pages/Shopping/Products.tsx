@@ -1,27 +1,25 @@
 import { For } from 'solid-js';
+import { useNavigate } from '@solidjs/router';
+
 import Filters from './Filters';
-
-// import { useNavigate } from "solid-app-router";
-
-import { Product } from './product.model';
+import { Product as ProductType } from './product.model';
 import { products } from './Shopping';
 
-function ProductTile(props: { product: Product; }) {
+const ProductTile = (props: { product: ProductType; }) => {
 
   const { product } = props;
+  const navigate = useNavigate();
 
-  // const navigate = useNavigate();
-  
-//   .lt-clamp-3 {
-//         display: -webkit-box;
-//         -webkit-line-clamp: 3;
-//         -webkit-box-orient: vertical;  
-//         overflow: hidden;
-//   }
+  //   .lt-clamp-3 {
+  //         display: -webkit-box;
+  //         -webkit-line-clamp: 3;
+  //         -webkit-box-orient: vertical;  
+  //         overflow: hidden;
+  //   }
 
   return (
     <div class="col-lg-3">
-      <div class="card">
+      <div class="card" onclick={() => { navigate(`${product.id}/`) }}>
         <span class="p-3">
           <img src={product.image} class="card-img-top" alt="..." />
         </span>
@@ -34,7 +32,7 @@ function ProductTile(props: { product: Product; }) {
   )
 }
 
-export default function Products() {
+const Products = () => {
   return (
     <div class="row mb-5 mt-5">
       <h3 class="mb-5">Products</h3>
@@ -49,3 +47,5 @@ export default function Products() {
     </div>
   )
 }
+
+export default Products;
