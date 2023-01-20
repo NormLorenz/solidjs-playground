@@ -2,7 +2,7 @@
   .cart-link {
     position:relative;
   }
-  .cart-item-indicator {
+  .cart-link-indicator {
     background: #00d46a;
     width: 21px;
     height: 21px;
@@ -34,8 +34,8 @@ export const [showCart,setShowCart] = createSignal(false);
 const CartLink = () => {
   return (
     <>
-      <a class="nav-link active" aria-current="page" href="#" onClick={setShowCart(true)}>
-        Cart {cartItems.length > 0 ? <span class="cart-item-indicator"> {cartItems.length} </span> : null}
+      <a class="nav-link active cart-link" aria-current="page" href="#" onClick={setShowCart(true)}>
+        Cart {cartItems.length > 0 ? <span class="cart-link-indicator"> {cartItems.length} </span> : null}
       </a>
     </>
   )
