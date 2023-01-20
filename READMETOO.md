@@ -9,13 +9,12 @@
 - pass/emit props by a component
 - print a portion of the page
 - testing with jest
-- understand functions with props
+- build a fireAlarm fragement
 - pages
   - build a shopping cart
   - build an imbedded google chart 
     - https://developers.google.com/chart/interactive/docs/quick_start
     - https://www.w3schools.com/js/js_graphics_google_chart.asp
-    - https://www.npmjs.com/package/google-charts
   - build a movies page
   - finished a registration form with email
   - build a firebase/firestore real time update page
