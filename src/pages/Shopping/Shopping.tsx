@@ -1,8 +1,9 @@
-import { createSignal } from "solid-js";
-import { createStore } from "solid-js/store";
+import { createSignal } from 'solid-js';
+import { createStore } from 'solid-js/store';
 
-import { productList } from "./productList";
-import Products from "./Products";
+import { productList } from './productList';
+import Products from './Products';
+// import styles from './Shopping.module.css';
 
 export const [loading, setLoading] = createSignal(false);
 export const [showCart, setShowCart] = createSignal(false);
